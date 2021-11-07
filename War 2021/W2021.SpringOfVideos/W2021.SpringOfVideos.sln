@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31512.422
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W2021.SpringOfVideos", "W2021.SpringOfVideos.csproj", "{727AE433-5DB6-48E8-ACAE-E8E70FEF7513}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W2021.Helpers", "..\W2021.Helpers\W2021.Helpers.csproj", "{B3288C0F-2DF4-4C03-B003-C5D59F781725}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{727AE433-5DB6-48E8-ACAE-E8E70FEF7513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727AE433-5DB6-48E8-ACAE-E8E70FEF7513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727AE433-5DB6-48E8-ACAE-E8E70FEF7513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727AE433-5DB6-48E8-ACAE-E8E70FEF7513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3288C0F-2DF4-4C03-B003-C5D59F781725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3288C0F-2DF4-4C03-B003-C5D59F781725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3288C0F-2DF4-4C03-B003-C5D59F781725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3288C0F-2DF4-4C03-B003-C5D59F781725}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {255C54F1-D042-49A8-BD78-D5E58188E627}
+	EndGlobalSection
+EndGlobal

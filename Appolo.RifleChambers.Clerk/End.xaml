@@ -1,0 +1,59 @@
+﻿<Page x:Class="Appolo.RifleChambers.Clerk.End"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Appolo.RifleChambers.Clerk"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="End">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/background.png"/>
+        </Grid.Background>
+        
+        <Grid Margin="150px 118px 0px 0px">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="925"/>
+                <ColumnDefinition Width="88"/>
+                <ColumnDefinition Width="542"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Source="images/Gonec.png" Width="925px" VerticalAlignment="Top"/>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="102"/>
+                    <RowDefinition Height="230"/>
+                    <RowDefinition Height="52"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="152"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="1" Width="542" Foreground="#931931" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" TextAlignment="Center" FontSize="100px" FontWeight="Bold">
+                    <Run>гонец отправлен</Run>
+                </TextBlock>
+
+                <Image Grid.Row="3" Source="images/UpShadow.png" Width="422px"/>
+
+                <Button Click="Start_Click" Grid.Row="4" Width="422px" Style="{StaticResource TransparentStyle}">
+                    <Grid>
+                        <Image Source="images/DefaultButton.png" Height="147" Stretch="Fill"/>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Width="450px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="60px" FontWeight="Bold">
+                            <Run>вернуться</Run>
+                        </TextBlock>
+                    </Grid>
+                </Button>
+
+                <Image Grid.Row="5" Source="images/DownShadow.png" Width="422px"/>
+
+                <Image Grid.Row="7" Source="images/ink.png" Stretch="Fill"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

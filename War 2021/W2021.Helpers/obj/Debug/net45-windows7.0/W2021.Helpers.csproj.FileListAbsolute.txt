@@ -1,0 +1,5 @@
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Debug\net45-windows7.0\W2021.Helpers.csproj.AssemblyReference.cache
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Debug\net45-windows7.0\W2021.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Debug\net45-windows7.0\W2021.Helpers.AssemblyInfoInputs.cache
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Debug\net45-windows7.0\W2021.Helpers.AssemblyInfo.cs
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Debug\net45-windows7.0\W2021.Helpers.csproj.CoreCompileInputs.cache

@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Molot.ttf" />
+    <None Remove="Fonts\Roboto-Regular.ttf" />
+    <None Remove="Images\Background.png" />
+    <None Remove="Images\CloseIcon.png" />
+    <None Remove="Images\IdleBackground.png" />
+    <None Remove="Images\Logo.png" />
+    <None Remove="Images\TextBackground.png" />
+    <None Remove="MultiplyEffect.fx" />
+    <None Remove="MultiplyEffect.ps" />
+    <None Remove="Photos\10_1.jpg" />
+    <None Remove="Photos\11_1.jpg" />
+    <None Remove="Photos\12_1.jpg" />
+    <None Remove="Photos\13_1.jpg" />
+    <None Remove="Photos\14_1.jpg" />
+    <None Remove="Photos\15_1.jpg" />
+    <None Remove="Photos\16_1.jpg" />
+    <None Remove="Photos\17_1.jpg" />
+    <None Remove="Photos\18_1.jpg" />
+    <None Remove="Photos\19_1.jpg" />
+    <None Remove="Photos\1_1.jpg" />
+    <None Remove="Photos\20_1.jpg" />
+    <None Remove="Photos\2_1.jpg" />
+    <None Remove="Photos\3_1.jpg" />
+    <None Remove="Photos\4_1.jpg" />
+    <None Remove="Photos\5_1.jpg" />
+    <None Remove="Photos\6_1.jpg" />
+    <None Remove="Photos\7_1.jpg" />
+    <None Remove="Photos\8_1.jpg" />
+    <None Remove="Photos\9_1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\W2021.Helpers\W2021.Helpers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\CloseIcon.png" />
+    <Resource Include="Images\IdleBackground.png" />
+    <Resource Include="Images\TextBackground.png" />
+    <Resource Include="MultiplyEffect.fx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Molot.ttf" />
+    <Resource Include="Fonts\Roboto-Regular.ttf" />
+    <Resource Include="Images\Background.png" />
+    <Resource Include="Images\Logo.png" />
+    <Resource Include="MultiplyEffect.ps" />
+    <Resource Include="Photos\10_1.jpg" />
+    <Resource Include="Photos\11_1.jpg" />
+    <Resource Include="Photos\12_1.jpg" />
+    <Resource Include="Photos\13_1.jpg" />
+    <Resource Include="Photos\14_1.jpg" />
+    <Resource Include="Photos\15_1.jpg" />
+    <Resource Include="Photos\16_1.jpg" />
+    <Resource Include="Photos\17_1.jpg" />
+    <Resource Include="Photos\18_1.jpg" />
+    <Resource Include="Photos\19_1.jpg" />
+    <Resource Include="Photos\1_1.jpg" />
+    <Resource Include="Photos\20_1.jpg" />
+    <Resource Include="Photos\2_1.jpg" />
+    <Resource Include="Photos\3_1.jpg" />
+    <Resource Include="Photos\4_1.jpg" />
+    <Resource Include="Photos\5_1.jpg" />
+    <Resource Include="Photos\6_1.jpg" />
+    <Resource Include="Photos\7_1.jpg" />
+    <Resource Include="Photos\8_1.jpg" />
+    <Resource Include="Photos\9_1.jpg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fonts\KREMLIN ALEXANDER.OTF" />
+    <None Remove="fonts\Kremlin Alexander.ttf" />
+    <None Remove="fonts\MUROMETZ.TTF" />
+    <None Remove="images\background.png" />
+    <None Remove="images\BetweenShadow.png" />
+    <None Remove="images\BetweenShadow2.png" />
+    <None Remove="images\DefaultButton.png" />
+    <None Remove="images\DefaultButton2.png" />
+    <None Remove="images\DownShadow.png" />
+    <None Remove="images\DownShadow2.png" />
+    <None Remove="images\EndBackground.png" />
+    <None Remove="images\GreenButton.png" />
+    <None Remove="images\RedButton.png" />
+    <None Remove="images\Shadow.png" />
+    <None Remove="images\UpShadow.png" />
+    <None Remove="images\UpShadow2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="fonts\KREMLIN ALEXANDER.OTF" />
+    <Resource Include="fonts\Kremlin Alexander.ttf" />
+    <Resource Include="fonts\MUROMETZ.TTF" />
+    <Resource Include="images\background.png" />
+    <Resource Include="images\BetweenShadow.png" />
+    <Resource Include="images\BetweenShadow2.png" />
+    <Resource Include="images\DefaultButton.png" />
+    <Resource Include="images\DefaultButton2.png" />
+    <Resource Include="images\DownShadow.png" />
+    <Resource Include="images\DownShadow2.png" />
+    <Resource Include="images\EndBackground.png" />
+    <Resource Include="images\GreenButton.png" />
+    <Resource Include="images\RedButton.png" />
+    <Resource Include="images\Shadow.png" />
+    <Resource Include="images\UpShadow.png" />
+    <Resource Include="images\UpShadow2.png" />
+  </ItemGroup>
+
+</Project>

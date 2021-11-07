@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "aa72b3cd-4fac-4fdf-a388-2214a3cdc5bc": {
+      "ProjectGuid": "aa72b3cd-4fac-4fdf-a388-2214a3cdc5bc",
+      "DisplayName": "W2021.SpringOfVictory",
+      "ColorIndex": 0
+    },
+    "2ab060f5-8507-4493-a5a7-7727f2764fcb": {
+      "ProjectGuid": "2ab060f5-8507-4493-a5a7-7727f2764fcb",
+      "DisplayName": "W2021.Helpers",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

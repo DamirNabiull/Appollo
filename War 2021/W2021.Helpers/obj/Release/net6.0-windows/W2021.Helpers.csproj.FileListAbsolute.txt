@@ -1,0 +1,11 @@
+D:\Projects\Appollo\War 2021\W2021.Helpers\bin\Release\net6.0-windows\W2021.Helpers.deps.json
+D:\Projects\Appollo\War 2021\W2021.Helpers\bin\Release\net6.0-windows\W2021.Helpers.dll
+D:\Projects\Appollo\War 2021\W2021.Helpers\bin\Release\net6.0-windows\ref\W2021.Helpers.dll
+D:\Projects\Appollo\War 2021\W2021.Helpers\bin\Release\net6.0-windows\W2021.Helpers.pdb
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Release\net6.0-windows\W2021.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Release\net6.0-windows\W2021.Helpers.AssemblyInfoInputs.cache
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Release\net6.0-windows\W2021.Helpers.AssemblyInfo.cs
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Release\net6.0-windows\W2021.Helpers.csproj.CoreCompileInputs.cache
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Release\net6.0-windows\W2021.Helpers.dll
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Release\net6.0-windows\ref\W2021.Helpers.dll
+D:\Projects\Appollo\War 2021\W2021.Helpers\obj\Release\net6.0-windows\W2021.Helpers.pdb

@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Dale\\Documents\\Appolo\\Appolo.RifleChambers.Clerk\\Appolo.RifleChambers.Clerk.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Dale\\Documents\\Appolo\\Appolo.RifleChambers.Clerk\\Appolo.RifleChambers.Clerk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Dale\\Documents\\Appolo\\Appolo.RifleChambers.Clerk\\Appolo.RifleChambers.Clerk.csproj",
+        "projectName": "Appolo.RifleChambers.Clerk",
+        "projectPath": "C:\\Users\\Dale\\Documents\\Appolo\\Appolo.RifleChambers.Clerk\\Appolo.RifleChambers.Clerk.csproj",
+        "packagesPath": "C:\\Users\\Dale\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dale\\Documents\\Appolo\\Appolo.RifleChambers.Clerk\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Dale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "WPFTabTip": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21458.32\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

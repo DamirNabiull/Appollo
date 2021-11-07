@@ -1,0 +1,31 @@
+﻿<Page x:Class="W2021.WonderfulSalvation.PageL"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:W2021.WonderfulSalvation" mc:Ignorable="d" d:DesignHeight="1080" d:DesignWidth="1920" Title="PageL">
+
+    <Canvas>
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="193px" Height="349px" Canvas.Left="19px" Canvas.Top="329px" local:CellBehavior.Image1="Photos_L/1-1.png" local:CellBehavior.Image2="Photos_L/1-2.png" local:CellBehavior.Image3="Photos_L/1-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="196px" Height="352px" Canvas.Left="219px" Canvas.Top="328px" local:CellBehavior.Image1="Photos_L/2-1.png" local:CellBehavior.Image2="Photos_L/2-2.png" local:CellBehavior.Image3="Photos_L/2-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="197px" Height="351px" Canvas.Left="424px" Canvas.Top="328px" local:CellBehavior.Image1="Photos_L/3-1.png" local:CellBehavior.Image2="Photos_L/3-2.png" local:CellBehavior.Image3="Photos_L/3-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="194px" Height="338px" Canvas.Left="221px" Canvas.Top="699px" local:CellBehavior.Image1="Photos_L/4-1.png" local:CellBehavior.Image2="Photos_L/4-2.png" local:CellBehavior.Image3="Photos_L/4-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="196px" Height="338px" Canvas.Left="426px" Canvas.Top="699px" local:CellBehavior.Image1="Photos_L/5-1.png" local:CellBehavior.Image2="Photos_L/5-2.png" local:CellBehavior.Image3="Photos_L/5-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="200px" Height="356px" Canvas.Left="1068px" Canvas.Top="321px" local:CellBehavior.Image1="Photos_L/6-1.png" local:CellBehavior.Image2="Photos_L/6-2.png" local:CellBehavior.Image3="Photos_L/6-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="200px" Height="356px" Canvas.Left="1279px" Canvas.Top="320px" local:CellBehavior.Image1="Photos_L/7-1.png" local:CellBehavior.Image2="Photos_L/7-2.png" local:CellBehavior.Image3="Photos_L/7-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="201px" Height="357px" Canvas.Left="1488px" Canvas.Top="319px" local:CellBehavior.Image1="Photos_L/8-1.png" local:CellBehavior.Image2="Photos_L/8-2.png" local:CellBehavior.Image3="Photos_L/8-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="199px" Height="341px" Canvas.Left="1069px" Canvas.Top="698px" local:CellBehavior.Image1="Photos_L/9-1.png" local:CellBehavior.Image2="Photos_L/9-2.png" local:CellBehavior.Image3="Photos_L/9-3.png"/>
+
+        <RadioButton Checked="RadioButton_Checked" Style="{StaticResource CellButton}" Width="202px" Height="344px" Canvas.Left="1278px" Canvas.Top="696px" local:CellBehavior.Image1="Photos_L/10-1.png" local:CellBehavior.Image2="Photos_L/10-2.png" local:CellBehavior.Image3="Photos_L/10-3.png"/>
+
+        <Image Width="394px" Height="720px" Canvas.Left="655px" Canvas.Top="321px" x:Name="DescriptionPhoto" />
+    </Canvas>
+</Page>

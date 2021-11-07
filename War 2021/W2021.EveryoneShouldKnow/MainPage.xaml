@@ -1,0 +1,77 @@
+﻿<Page x:Class="W2021.EveryoneShouldKnow.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:W2021.EveryoneShouldKnow"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MainPage">
+
+    <StackPanel Orientation="Vertical">
+        <StackPanel.Background>
+            <ImageBrush ImageSource="Images/MainBackground.png"/>
+        </StackPanel.Background>
+        
+        <Grid Margin="55px 25px 55px 0px">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Column="0" Grid.Row="0" Width="157px" Source="Images/Logo.png"></Image>
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="23px 0 0 0" Foreground="#363636" FontFamily="Molot" FontSize="48px" VerticalAlignment="Center">О них должен знать каждый</TextBlock>
+        </Grid>
+        
+        <Grid Margin="55px 17px 55px 0px">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="295px"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="636px"/>
+                <ColumnDefinition Width="52px"/>
+                <ColumnDefinition Width="686px"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ItemsControl Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Cells}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="5" Columns="2"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <RadioButton Loaded="RadioButton_Loaded" local:CellBehavior.Hero="{Binding}" Checked="RadioButton_Checked" GroupName="Tab" Style="{StaticResource CellButton}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <Image VerticalAlignment="Top" Grid.Row="0"  Grid.Column="2" x:Name="Photo"/>
+
+            <Grid Grid.Row="0" Grid.Column="4" Height="888px">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="65px"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/TextBackground.png" Stretch="UniformToFill" />
+                </Grid.Background>
+                <StackPanel Grid.Row="0" Orientation="Vertical">
+                    <TextBlock Foreground="#B8A882" FontFamily="Molot" TextWrapping="Wrap" TextAlignment="Center" FontSize="60px" Margin="48px 52px 48px 0px" x:Name="Title"/>
+                    <TextBlock Foreground="#B8A882" FontFamily="Molot" TextWrapping="Wrap" TextAlignment="Center" FontSize="45px" Margin="48px 0px 48px 25px" x:Name="Age"/>
+                    <TextBlock Foreground="#B8A882" FontFamily="Roboto" FontStyle="Italic" TextWrapping="Wrap" TextAlignment="Left" FontSize="24px" Margin="70px 0px 70px 15px" x:Name="Quote"/>
+                </StackPanel>
+                <ScrollViewer PanningMode="VerticalOnly" ManipulationBoundaryFeedback="ScrollViewer_ManipulationBoundaryFeedback" Grid.Row="1" Style="{StaticResource ThemedScrollViewer}" Margin="40px 0px">
+                    <TextBlock TextAlignment="Justify" TextWrapping="Wrap" Margin="30px 0px" x:Name="Description" FontFamily="Roboto" FontSize="24px" Foreground="White"/>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </StackPanel>
+</Page>

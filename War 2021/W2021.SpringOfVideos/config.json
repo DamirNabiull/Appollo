@@ -1,0 +1,30 @@
+{
+  "PlayerLocations": [
+    {
+      "X": 0,
+      "Y": 0
+    },
+    {
+      "X": 640,
+      "Y": 0
+    },
+    {
+      "X": 1280,
+      "Y": 0
+    }
+  ],
+  "PlayerSizes": [
+    {
+      "Width": 640,
+      "Height": 1080
+    },
+    {
+      "Width": 640,
+      "Height": 1080
+    },
+    {
+      "Width": 640,
+      "Height": 1080
+    }
+  ]
+}

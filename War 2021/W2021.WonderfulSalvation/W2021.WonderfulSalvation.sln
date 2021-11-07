@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31512.422
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W2021.WonderfulSalvation", "W2021.WonderfulSalvation.csproj", "{92A8BC51-55EC-4495-A2E4-2CE24A9D2B60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W2021.Helpers", "..\W2021.Helpers\W2021.Helpers.csproj", "{3A22C3A6-4527-4E3D-BB6F-7A4E5D9711EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92A8BC51-55EC-4495-A2E4-2CE24A9D2B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A8BC51-55EC-4495-A2E4-2CE24A9D2B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A8BC51-55EC-4495-A2E4-2CE24A9D2B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A8BC51-55EC-4495-A2E4-2CE24A9D2B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A22C3A6-4527-4E3D-BB6F-7A4E5D9711EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A22C3A6-4527-4E3D-BB6F-7A4E5D9711EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A22C3A6-4527-4E3D-BB6F-7A4E5D9711EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A22C3A6-4527-4E3D-BB6F-7A4E5D9711EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14A29143-A279-42C8-AC2E-2B728E484602}
+	EndGlobalSection
+EndGlobal

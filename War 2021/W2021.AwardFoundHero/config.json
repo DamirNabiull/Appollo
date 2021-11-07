@@ -1,0 +1,12 @@
+{
+  "Debug": true,
+  "CropRect": {
+    "Top": 288,
+    "Left": 824,
+    "Width": 88,
+    "Height": 92
+  },
+  "Videos": {
+    "1.mp4",
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "W0bkrEIQwjv61qlAEOM8pyBZrC6n2E0oCXEn6Hlgg7r7pPrDXVUb//k1CWSoexeiLQu7obqesG8DodTVaI3fvA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Appollo\\War 2021\\W2021.SpringOfVideos\\W2021.SpringOfVideos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexa\\.nuget\\packages\\videolan.libvlc.windows\\3.0.16\\videolan.libvlc.windows.3.0.16.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\vlc.dotnet.core\\3.1.0\\vlc.dotnet.core.3.1.0.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\vlc.dotnet.core.interops\\3.1.0\\vlc.dotnet.core.interops.3.1.0.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\vlc.dotnet.forms\\3.1.0\\vlc.dotnet.forms.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

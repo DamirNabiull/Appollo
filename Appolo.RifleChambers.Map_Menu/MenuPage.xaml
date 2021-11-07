@@ -1,0 +1,104 @@
+﻿<Page x:Class="Appolo.RifleChambers.Map_Menu.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Appolo.RifleChambers.Map_Menu"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MenuPage">
+
+    <Grid Height="1080" Width="1920">
+        <Grid.Background>
+            <ImageBrush ImageSource="images/background.png"/>
+        </Grid.Background>
+        <TextBlock Margin="754 142 754 0" Height="115" VerticalAlignment="Top" FontFamily="{StaticResource Kremlin}" FontSize="100px" Foreground="#931931">приказы</TextBlock>
+        <Grid Margin="163px 249px 166px 0px">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40px"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40px"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40px"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="730px"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="order_01" Click="Button_Click" Grid.Row="0" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_0.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_02" Click="Button_Click" Grid.Row="1" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_1.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_03" Click="Button_Click" Grid.Row="2" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_2.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_04" Click="Button_Click" Grid.Row="3" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_3.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_05" Click="Button_Click" Grid.Row="4" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_4.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_06" Click="Button_Click" Grid.Row="5" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_5.png" Width="367px" Stretch="Fill"/></Button>
+                
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="order_07" Click="Button_Click" Grid.Row="0" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_center_0.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_08" Click="Button_Click" Grid.Row="1" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_center_1.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_09" Click="Button_Click" Grid.Row="2" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_center_2.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_10" Click="Button_Click" Grid.Row="3" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_center_3.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_11" Click="Button_Click" Grid.Row="4" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_center_4.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_12" Click="Button_Click" Grid.Row="5" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_left_center_5.png" Width="367px" Stretch="Fill"/></Button>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="order_13" Click="Button_Click" Grid.Row="0" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_center_0.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_14" Click="Button_Click" Grid.Row="1" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_center_1.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_15" Click="Button_Click" Grid.Row="2" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_center_2.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_16" Click="Button_Click" Grid.Row="3" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_center_3.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_17" Click="Button_Click" Grid.Row="4" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_center_4.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_18" Click="Button_Click" Grid.Row="5" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_center_5.png" Width="367px" Stretch="Fill"/></Button>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                    <RowDefinition Height="115"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="order_19" Click="Button_Click" Grid.Row="0" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_0.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_20" Click="Button_Click" Grid.Row="1" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_1.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_21" Click="Button_Click" Grid.Row="2" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_2.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_22" Click="Button_Click" Grid.Row="3" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_3.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_23" Click="Button_Click" Grid.Row="4" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_4.png" Width="367px" Stretch="Fill"/></Button>
+                <Button x:Name="order_24" Click="Button_Click" Grid.Row="5" Width="367px" Style="{StaticResource TransparentStyle}"><Image Source="images/button_right_5.png" Width="367px" Stretch="Fill"/></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

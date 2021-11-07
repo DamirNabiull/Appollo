@@ -1,0 +1,60 @@
+﻿<Page x:Class="W2021.MassHeroism.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:W2021.MassHeroism"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MainPage">
+
+    <StackPanel Orientation="Vertical">
+        <StackPanel.Background>
+            <ImageBrush ImageSource="Images/Background.png"/>
+        </StackPanel.Background>
+        <Grid Margin="55px 25px 55px 4px">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Column="0" Grid.Row="0" Width="157px" Source="Images/Logo.png"></Image>
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="23px 0 0 0" Foreground="#363636" FontFamily="Molot" FontSize="48px" VerticalAlignment="Center">Массовый героизм</TextBlock>
+        </Grid>
+        <ItemsControl Margin="41px 0" Height="887px" ItemsSource="{Binding Cells}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="4" Columns="5"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Margin="14px" Style="{StaticResource TransparentStyle}" Click="Button_Click" local:CellBehavior.Hero="{Binding}">
+                        <Grid>
+                            <Border Background="#757575" Grid.Column="0" Grid.Row="0" BorderThickness="10px">
+                                <Border.BorderBrush>
+                                    <SolidColorBrush Color="#E2DDC6" Opacity="0.53"/>
+                                </Border.BorderBrush>
+                                <Border.Effect>
+                                    <local:MultiplyEffect>
+                                        <local:MultiplyEffect.Overlay>
+                                            <ImageBrush ImageSource="{Binding Photo}" Stretch="UniformToFill"/>
+                                        </local:MultiplyEffect.Overlay>
+                                    </local:MultiplyEffect>
+                                </Border.Effect>
+                            </Border>
+                            <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="0">
+                                <TextBlock TextAlignment="Center" TextWrapping="Wrap" MaxWidth="260px" FontFamily="Molot" FontSize="24px" Foreground="#E2DDC6" Text="{Binding Title}"/>
+                                <Rectangle Fill="#B20000" Width="41px" Height="5px" Margin="0 10px 0 0"/>
+                            </StackPanel>
+                        </Grid>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</Page>

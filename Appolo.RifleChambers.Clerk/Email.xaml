@@ -1,0 +1,85 @@
+﻿<Page x:Class="Appolo.RifleChambers.Clerk.Email"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Appolo.RifleChambers.Clerk"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Email">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/background.png"/>
+        </Grid.Background>
+
+        <Grid Margin="0px 41px 0px 0px" Height="84" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1785"/>
+                <ColumnDefinition Width="84"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Click="Exit_Button" Grid.Column="1" Width="84" Style="{StaticResource TransparentStyle}">
+                <Image Source="images/cancel.png" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
+        <Grid Margin="0px 168px 0px 0px">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="115"/>
+                <RowDefinition Height="10"/>
+
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="25"/>
+
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="11"/>
+
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Width="1178px" Foreground="#931931" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" TextAlignment="Center" FontSize="100px" FontWeight="Bold">
+                <Run>огласи свой e-mail</Run>
+            </TextBlock>
+
+            <Grid Grid.Column="0" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="151"/>
+                    <ColumnDefinition Width="358"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="875"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="358"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="1" Source="images/ink.png" Height="109" Stretch="Fill" VerticalAlignment="Top"/>
+
+                <TextBox x:Name="Email_Field" InputLanguageManager.InputLanguage="en" InputScope="EmailSmtpAddress" Grid.Column="3" Height="100px" FontFamily="Inter" Foreground="#332721" Background="#E7D7BE" BorderThickness="3px" BorderBrush="#FFFFFF" VerticalAlignment="Bottom" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="50px" FontWeight="Bold"></TextBox>
+
+                <Image Grid.Column="5" Source="images/ink.png" Height="109" Stretch="Fill" VerticalAlignment="Top"/>
+            </Grid>
+
+            <TextBlock x:Name="Incorrect_Field" Grid.Row="5" Grid.Column="3" Height="30px" FontFamily="{StaticResource Kremlin}" Foreground="#931931" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="30px" FontWeight="Bold"></TextBlock>
+
+            <Image Grid.Row="7" Source="images/UpShadow.png" Width="405px"/>
+            <Button Click="Send_Click" Grid.Row="8" Width="405px" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/DefaultButton.png" Height="121" Stretch="Fill"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="450px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="60px" FontWeight="Bold">
+                            <Run>далее</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+            <Image Grid.Row="9" Source="images/DownShadow.png" Width="405px"/>
+
+        </Grid>
+    </Grid>
+</Page>

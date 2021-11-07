@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+	<Platforms>x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Emgu.CV" Version="4.5.2.4673" />
+    <PackageReference Include="Emgu.CV.Bitmap" Version="4.5.2.4673" />
+    <PackageReference Include="Emgu.CV.runtime.windows" Version="4.5.2.4673" />
+    <PackageReference Include="FlaUI.Core" Version="3.2.0" />
+    <PackageReference Include="FlaUI.UIA3" Version="3.2.0" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.16" />
+    <PackageReference Include="Vlc.DotNet.Forms" Version="3.1.0" />
+    <PackageReference Include="ZXing.Net" Version="0.16.6" />
+    <Reference Include="TIS.Imaging.ICImagingControl35">
+	  <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\The Imaging Source Europe GmbH\IC Imaging Control 3.5 .NET Library\bin\x86\TIS.Imaging.ICImagingControl35.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\W2021.Helpers\W2021.Helpers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+D:\Projects\Appollo\War 2021\W2021.AwardFoundHero\obj\Debug\net6.0-windows\Fakes\tisiicic35v3543937cpkt25780592987928a86\o\net6.0-windows\f.csproj.AssemblyReference.cache
+D:\Projects\Appollo\War 2021\W2021.AwardFoundHero\obj\Debug\net6.0-windows\Fakes\tisiicic35v3543937cpkt25780592987928a86\o\net6.0-windows\f.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Appollo\War 2021\W2021.AwardFoundHero\obj\Debug\net6.0-windows\Fakes\tisiicic35v3543937cpkt25780592987928a86\o\net6.0-windows\f.csproj.CoreCompileInputs.cache

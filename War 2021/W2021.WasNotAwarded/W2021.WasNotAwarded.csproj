@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Molot.ttf" />
+    <None Remove="Fonts\Roboto-Regular.ttf" />
+    <None Remove="Images\Background.png" />
+    <None Remove="Images\ButtonBackground.png" />
+    <None Remove="Images\CloseIcon.png" />
+    <None Remove="Images\IdleBackground.png" />
+    <None Remove="Images\Logo.png" />
+    <None Remove="Photos\1.jpg" />
+    <None Remove="Photos\1.png" />
+    <None Remove="Photos\10.jpg" />
+    <None Remove="Photos\11.jpg" />
+    <None Remove="Photos\12.jpg" />
+    <None Remove="Photos\13.jpg" />
+    <None Remove="Photos\14.jpg" />
+    <None Remove="Photos\15.jpg" />
+    <None Remove="Photos\16.jpg" />
+    <None Remove="Photos\17.jpg" />
+    <None Remove="Photos\18.jpg" />
+    <None Remove="Photos\19.jpg" />
+    <None Remove="Photos\2.jpg" />
+    <None Remove="Photos\20.jpg" />
+    <None Remove="Photos\3.jpg" />
+    <None Remove="Photos\4.jpg" />
+    <None Remove="Photos\5.jpg" />
+    <None Remove="Photos\6.jpg" />
+    <None Remove="Photos\7.jpg" />
+    <None Remove="Photos\8.jpg" />
+    <None Remove="Photos\9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\W2021.Helpers\W2021.Helpers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Molot.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Roboto-Regular.ttf" />
+    <Resource Include="Images\Background.png" />
+    <Resource Include="Images\ButtonBackground.png" />
+    <Resource Include="Images\CloseIcon.png" />
+    <Resource Include="Images\IdleBackground.png" />
+    <Resource Include="Images\Logo.png" />
+    <Resource Include="Photos\1.jpg" />
+    <Resource Include="Photos\10.jpg" />
+    <Resource Include="Photos\11.jpg" />
+    <Resource Include="Photos\12.jpg" />
+    <Resource Include="Photos\13.jpg" />
+    <Resource Include="Photos\14.jpg" />
+    <Resource Include="Photos\15.jpg" />
+    <Resource Include="Photos\16.jpg" />
+    <Resource Include="Photos\17.jpg" />
+    <Resource Include="Photos\18.jpg" />
+    <Resource Include="Photos\19.jpg" />
+    <Resource Include="Photos\2.jpg" />
+    <Resource Include="Photos\20.jpg" />
+    <Resource Include="Photos\3.jpg" />
+    <Resource Include="Photos\4.jpg" />
+    <Resource Include="Photos\5.jpg" />
+    <Resource Include="Photos\6.jpg" />
+    <Resource Include="Photos\7.jpg" />
+    <Resource Include="Photos\8.jpg" />
+    <Resource Include="Photos\9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties config_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

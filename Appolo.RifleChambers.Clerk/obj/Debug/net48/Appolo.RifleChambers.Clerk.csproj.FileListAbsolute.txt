@@ -1,0 +1,8 @@
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\Debug\net48\Appolo.RifleChambers.Clerk.csproj.AssemblyReference.cache
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\Debug\net48\Appolo.RifleChambers.Clerk.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\Debug\net48\MainWindow.g.cs
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\Debug\net48\Name.g.cs
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\Debug\net48\Start.g.cs
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\Debug\net48\App.g.cs
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\Debug\net48\Appolo.RifleChambers.Clerk_MarkupCompile.cache
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\Debug\net48\Appolo.RifleChambers.Clerk_MarkupCompile.lref

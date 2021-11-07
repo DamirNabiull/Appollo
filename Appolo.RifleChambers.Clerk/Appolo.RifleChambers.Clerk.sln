@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31710.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appolo.RifleChambers.Clerk", "Appolo.RifleChambers.Clerk.csproj", "{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}.Debug|x64.ActiveCfg = Debug|x64
+		{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}.Debug|x64.Build.0 = Debug|x64
+		{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}.Release|x64.ActiveCfg = Release|x64
+		{D4AB316B-A089-41A5-A589-A1A2C9B07AF1}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F93BDBDF-44A5-46CF-B1CC-C7B38C94C851}
+	EndGlobalSection
+EndGlobal

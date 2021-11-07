@@ -1,0 +1,6 @@
+﻿{
+  "ComPort": "COM3",
+  "VideoPath": "Video.mp4",
+  "FilterStep": 100,
+  "UpdateRate": 60
+}

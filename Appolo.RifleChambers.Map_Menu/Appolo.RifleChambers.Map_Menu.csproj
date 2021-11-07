@@ -1,0 +1,134 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AssemblyName>MapMenu</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fonts\KREMLIN ALEXANDER.OTF" />
+    <None Remove="fonts\Kremlin Alexander.ttf" />
+    <None Remove="fonts\MUROMETZ.TTF" />
+    <None Remove="images\background.png" />
+    <None Remove="images\BetweenShadow.png" />
+    <None Remove="images\button_left_0.png" />
+    <None Remove="images\button_left_1.png" />
+    <None Remove="images\button_left_2.png" />
+    <None Remove="images\button_left_3.png" />
+    <None Remove="images\button_left_4.png" />
+    <None Remove="images\button_left_5.png" />
+    <None Remove="images\button_left_center_0.png" />
+    <None Remove="images\button_left_center_1.png" />
+    <None Remove="images\button_left_center_2.png" />
+    <None Remove="images\button_left_center_3.png" />
+    <None Remove="images\button_left_center_4.png" />
+    <None Remove="images\button_left_center_5.png" />
+    <None Remove="images\button_right_0.png" />
+    <None Remove="images\button_right_1.png" />
+    <None Remove="images\button_right_2.png" />
+    <None Remove="images\button_right_3.png" />
+    <None Remove="images\button_right_4.png" />
+    <None Remove="images\button_right_5.png" />
+    <None Remove="images\button_right_center_0.png" />
+    <None Remove="images\button_right_center_1.png" />
+    <None Remove="images\button_right_center_2.png" />
+    <None Remove="images\button_right_center_3.png" />
+    <None Remove="images\button_right_center_4.png" />
+    <None Remove="images\button_right_center_5.png" />
+    <None Remove="images\cancel.png" />
+    <None Remove="images\CloseIcon.png" />
+    <None Remove="images\DefaultButton.png" />
+    <None Remove="images\DownShadow.png" />
+    <None Remove="images\orders\order_01.png" />
+    <None Remove="images\orders\order_02.png" />
+    <None Remove="images\orders\order_03.png" />
+    <None Remove="images\orders\order_04.png" />
+    <None Remove="images\orders\order_05.png" />
+    <None Remove="images\orders\order_06.png" />
+    <None Remove="images\orders\order_07.png" />
+    <None Remove="images\orders\order_08.png" />
+    <None Remove="images\orders\order_09.png" />
+    <None Remove="images\orders\order_10.png" />
+    <None Remove="images\orders\order_11.png" />
+    <None Remove="images\orders\order_12.png" />
+    <None Remove="images\orders\order_13.png" />
+    <None Remove="images\orders\order_14.png" />
+    <None Remove="images\orders\order_15.png" />
+    <None Remove="images\orders\order_16.png" />
+    <None Remove="images\orders\order_17.png" />
+    <None Remove="images\orders\order_18.png" />
+    <None Remove="images\orders\order_19.png" />
+    <None Remove="images\orders\order_20.png" />
+    <None Remove="images\orders\order_21.png" />
+    <None Remove="images\orders\order_22.png" />
+    <None Remove="images\orders\order_23.png" />
+    <None Remove="images\orders\order_24.png" />
+    <None Remove="images\UpShadow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="fonts\KREMLIN ALEXANDER.OTF" />
+    <Resource Include="fonts\Kremlin Alexander.ttf" />
+    <Resource Include="fonts\MUROMETZ.TTF" />
+    <Resource Include="images\background.png" />
+    <Resource Include="images\BetweenShadow.png" />
+    <Resource Include="images\button_left_0.png" />
+    <Resource Include="images\button_left_1.png" />
+    <Resource Include="images\button_left_2.png" />
+    <Resource Include="images\button_left_3.png" />
+    <Resource Include="images\button_left_4.png" />
+    <Resource Include="images\button_left_5.png" />
+    <Resource Include="images\button_left_center_0.png" />
+    <Resource Include="images\button_left_center_1.png" />
+    <Resource Include="images\button_left_center_2.png" />
+    <Resource Include="images\button_left_center_3.png" />
+    <Resource Include="images\button_left_center_4.png" />
+    <Resource Include="images\button_left_center_5.png" />
+    <Resource Include="images\button_right_0.png" />
+    <Resource Include="images\button_right_1.png" />
+    <Resource Include="images\button_right_2.png" />
+    <Resource Include="images\button_right_3.png" />
+    <Resource Include="images\button_right_4.png" />
+    <Resource Include="images\button_right_5.png" />
+    <Resource Include="images\button_right_center_0.png" />
+    <Resource Include="images\button_right_center_1.png" />
+    <Resource Include="images\button_right_center_2.png" />
+    <Resource Include="images\button_right_center_3.png" />
+    <Resource Include="images\button_right_center_4.png" />
+    <Resource Include="images\button_right_center_5.png" />
+    <Resource Include="images\cancel.png" />
+    <Resource Include="images\CloseIcon.png" />
+    <Resource Include="images\DefaultButton.png" />
+    <Resource Include="images\DownShadow.png" />
+    <Resource Include="images\orders\order_01.png" />
+    <Resource Include="images\orders\order_02.png" />
+    <Resource Include="images\orders\order_03.png" />
+    <Resource Include="images\orders\order_04.png" />
+    <Resource Include="images\orders\order_05.png" />
+    <Resource Include="images\orders\order_06.png" />
+    <Resource Include="images\orders\order_07.png" />
+    <Resource Include="images\orders\order_08.png" />
+    <Resource Include="images\orders\order_09.png" />
+    <Resource Include="images\orders\order_10.png" />
+    <Resource Include="images\orders\order_11.png" />
+    <Resource Include="images\orders\order_12.png" />
+    <Resource Include="images\orders\order_13.png" />
+    <Resource Include="images\orders\order_14.png" />
+    <Resource Include="images\orders\order_15.png" />
+    <Resource Include="images\orders\order_16.png" />
+    <Resource Include="images\orders\order_17.png" />
+    <Resource Include="images\orders\order_18.png" />
+    <Resource Include="images\orders\order_19.png" />
+    <Resource Include="images\orders\order_20.png" />
+    <Resource Include="images\orders\order_21.png" />
+    <Resource Include="images\orders\order_22.png" />
+    <Resource Include="images\orders\order_23.png" />
+    <Resource Include="images\orders\order_24.png" />
+    <Resource Include="images\UpShadow.png" />
+  </ItemGroup>
+
+</Project>

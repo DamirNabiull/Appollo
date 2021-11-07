@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\01.png" />
+    <None Remove="images\02.png" />
+    <None Remove="images\03.png" />
+    <None Remove="images\04.png" />
+    <None Remove="images\05.png" />
+    <None Remove="images\06.png" />
+    <None Remove="images\07.png" />
+    <None Remove="images\08.png" />
+    <None Remove="images\09.png" />
+    <None Remove="images\10.png" />
+    <None Remove="images\11.png" />
+    <None Remove="images\12.png" />
+    <None Remove="images\13.png" />
+    <None Remove="images\14.png" />
+    <None Remove="images\15.png" />
+    <None Remove="images\16.png" />
+    <None Remove="images\17.png" />
+    <None Remove="images\18.png" />
+    <None Remove="images\19.png" />
+    <None Remove="images\20.png" />
+    <None Remove="images\21.png" />
+    <None Remove="images\22.png" />
+    <None Remove="images\23.png" />
+    <None Remove="images\24.png" />
+    <None Remove="images\default.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\01.png" />
+    <Resource Include="images\07.png" />
+    <Resource Include="images\13.png" />
+    <Resource Include="images\24.png" />
+    <Resource Include="images\02.png" />
+    <Resource Include="images\08.png" />
+    <Resource Include="images\15.png" />
+    <Resource Include="images\20.png" />
+    <Resource Include="images\12.png" />
+    <Resource Include="images\18.png" />
+    <Resource Include="images\23.png" />
+    <Resource Include="images\06.png" />
+    <Resource Include="images\11.png" />
+    <Resource Include="images\05.png" />
+    <Resource Include="images\22.png" />
+    <Resource Include="images\17.png" />
+    <Resource Include="images\09.png" />
+    <Resource Include="images\21.png" />
+    <Resource Include="images\04.png" />
+    <Resource Include="images\16.png" />
+    <Resource Include="images\10.png" />
+    <Resource Include="images\14.png" />
+    <Resource Include="images\03.png" />
+    <Resource Include="images\19.png" />
+    <Resource Include="images\default.png" />
+  </ItemGroup>
+
+</Project>

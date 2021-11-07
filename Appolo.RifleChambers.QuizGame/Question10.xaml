@@ -1,0 +1,101 @@
+﻿<Page x:Class="Appolo.RifleChambers.QuizGame.Question10"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Appolo.RifleChambers.QuizGame"
+      mc:Ignorable="d" 
+      d:DesignHeight="1920" d:DesignWidth="1080"
+      Title="Question10">
+
+    <Grid Height="1920" Width="1080">
+        <Grid.Background>
+            <ImageBrush ImageSource="images/background.png"/>
+        </Grid.Background>
+        <Grid Margin="0px 200px 0px 0px" Height="1720px">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="600"/>
+                <RowDefinition Height="81"/>
+
+                <RowDefinition Height="57"/>
+                <RowDefinition Height="19"/>
+
+                <RowDefinition Height="142"/>
+
+                <RowDefinition Height="1"/>
+
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+                <RowDefinition Height="12"/>
+
+                <RowDefinition Height="88"/>
+
+                <RowDefinition Height="*"/>
+
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="2" Width="500px" Foreground="#931931" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" TextAlignment="Center" FontSize="50px" FontWeight="Bold">
+                <Run>Вопрос 10 из 12</Run>
+            </TextBlock>
+
+            <TextBlock Grid.Column="0" Grid.Row="4" Width="761px" Foreground="#000000" FontFamily="{StaticResource Murometz}" TextWrapping="Wrap" TextAlignment="Center" FontSize="28px">
+                <Run>Бывали в стрелецкой службе особые дни, которых ждал каждый служилый человек. И вот настал один из них – Благовещенье, когда «весна зиму поборола». А чего Федор Молодцов ожидал от этого дня:</Run>
+            </TextBlock>
+
+            <Image Grid.Column="0" Grid.Row="7" Source="images/UpShadow.png" Width="580px"/>
+            <Button x:Name="button_1" Click="Correct_Click" Grid.Column="0" Grid.Row="8" Width="580px" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/DefaultButton.png" Width="580px"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="450px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="35px" FontWeight="Bold">
+                        <Run>Выплаты жалования</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+
+            <Image Grid.Column="0" Grid.Row="9" Source="images/BetweenShadow.png" Width="580px"/>
+
+            <Button x:Name="button_2" Click="Incorrect_Click" Grid.Column="0" Grid.Row="10" Width="580px" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/DefaultButton.png" Width="580px"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="490px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="35px" FontWeight="Bold">
+                        <Run>Выходной день для всех стрельцов</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+
+            <Image Grid.Column="0" Grid.Row="11" Source="images/BetweenShadow.png" Width="580px"/>
+
+            <Button x:Name="button_3" Click="Incorrect_Click" Grid.Column="0" Grid.Row="12" Width="580px" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/DefaultButton.png" Width="580px"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="490px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="35px" FontWeight="Bold">
+                        <Run>Всех стрельцов угощали блинами</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+
+            <Image Grid.Column="0" Grid.Row="13" Source="images/DownShadow.png" Width="580px"/>
+
+            <TextBlock x:Name="Definition" Grid.Column="0" Grid.Row="15" Width="712px" Foreground="#931931" FontFamily="{StaticResource Murometz}" TextWrapping="Wrap" TextAlignment="Center" FontSize="28px" Visibility="Hidden">
+                <Run Text="Государево жалование выплачивалось стрельцам два раза в год к Благовещенскому и Сергиевскому срокам."/>
+            </TextBlock>
+
+            <Button x:Name="next_page_button" Click="Next_Page_Click" Grid.Column="0" Grid.Row="17" Width="163px" Height="57px" Style="{StaticResource TransparentStyle}" Margin="0px 0px 0px 150px" IsEnabled="False">
+                <TextBlock Grid.Column="0" Grid.Row="0" Width="163px" Foreground="#7C6757" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="50px" FontWeight="Bold" TextDecorations="Underline">
+                        <Run>ДАЛЕЕ</Run>
+                </TextBlock>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

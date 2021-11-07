@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c3068e86-8b33-4956-9a5f-e66a68b077a9": {
+      "ProjectGuid": "c3068e86-8b33-4956-9a5f-e66a68b077a9",
+      "DisplayName": "Appolo.RifleChambers.Map_Menu",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
