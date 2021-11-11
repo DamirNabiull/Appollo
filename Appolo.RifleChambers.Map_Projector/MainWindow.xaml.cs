@@ -14,6 +14,11 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
+using System.Threading;
+using System.Windows.Media.Animation;
+using System.Net;
+using System.ComponentModel;
 
 namespace Appolo.RifleChambers.Map_Projector
 {
@@ -23,11 +28,11 @@ namespace Appolo.RifleChambers.Map_Projector
     public partial class MainWindow : Window
     {
         public PageManager _pageManager;
+        private static bool _isInProgress = false;
+        private HttpListener _listener;
+        private bool _server = true;
         public MainWindow()
         {
-            InitializeComponent();
-            _pageManager = new PageManager(NavFrame);
-
             var secondaryScreen = System.Windows.Forms.Screen.AllScreens.Where(s => !s.Primary).FirstOrDefault();
             if (secondaryScreen != null)
             {
@@ -40,42 +45,100 @@ namespace Appolo.RifleChambers.Map_Projector
                 this.Top = workingArea.Top;
                 this.Width = workingArea.Width;
                 this.Height = workingArea.Height;
-                // If window isn't loaded then maxmizing will result in the window displaying on the primary monitor
-                if (this.IsLoaded)
-                    this.WindowState = WindowState.Maximized;
             }
+
+            InitializeComponent();
+
+            //Photo.ImageSource = new BitmapImage(new Uri(@$"images/default.png", UriKind.Relative));
+            new Thread(RunServer).Start();
+        }
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            _server = false;
+            Environment.Exit(0);
+        }
+
+        private void RunServer()
+        {
+            try
+            {
+                _listener = new HttpListener();
+                NetAclChecker.AddAddress("http://*:3001/play/");
+                NetAclChecker.AddAddress("http://+:3001/play/");
+                _listener.Prefixes.Add("http://*:3001/play/");
+                _listener.Prefixes.Add("http://+:3001/play/");
+
+                _listener.Start();
+
+                while (_server)
+                {
+                    ThreadPool.QueueUserWorkItem(Process, _listener.GetContext());
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+        }
+
+        void Process(object o)
+        {
+            var context = o as HttpListenerContext;
+            var vars = context.Request.Url.ParseQueryString();
+
+            ChangeBackground(vars["map"]);
+
+            context.Response.StatusCode = 200;
+            context.Response.Close();
+        }
+
+        private void ChangeBackground(string photoPath)
+        {
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                _isInProgress = !_isInProgress;
+
+                if (_isInProgress)
+                {
+
+                    New_Photo.Opacity = 0.0;
+                    New_Photo.Source = new BitmapImage(new Uri(@$"pack://application:,,,/Appolo.RifleChambers.Map_Projector;component/images/{photoPath}.png"));
+
+                    Trace.WriteLine(@$"images/{photoPath}.png");
+
+                    var animation = new DoubleAnimation
+                    {
+                        From = 0,
+                        To = 1,
+                        BeginTime = TimeSpan.FromSeconds(0),
+                        Duration = TimeSpan.FromSeconds(2),
+                    };
+
+                    animation.Completed += (s, a) => New_Photo.Opacity = 1.0;
+
+                    New_Photo.BeginAnimation(UIElement.OpacityProperty, animation);
+                }
+                else
+                {
+                    var animation = new DoubleAnimation
+                    {
+                        From = 1,
+                        To = 0,
+                        BeginTime = TimeSpan.FromSeconds(0),
+                        Duration = TimeSpan.FromSeconds(2),
+                    };
+
+                    animation.Completed += (s, a) => New_Photo.Opacity = 0.0;
+                    New_Photo.BeginAnimation(UIElement.OpacityProperty, animation);
+                }
+            }));
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Maximized;
-            _pageManager.Navigate(typeof(MapPage));
-        }
-    }
-
-    static public class WindowExt
-    {
-
-        // NB : Best to call this function from the windows Loaded event or after showing the window
-        // (otherwise window is just positioned to fill the secondary monitor rather than being maximised).
-        public static void MaximizeToSecondaryMonitor(this Window window)
-        {
-            var secondaryScreen = System.Windows.Forms.Screen.AllScreens.Where(s => !s.Primary).FirstOrDefault();
-
-            if (secondaryScreen != null)
-            {
-                if (!window.IsLoaded)
-                    window.WindowStartupLocation = WindowStartupLocation.Manual;
-
-                var workingArea = secondaryScreen.WorkingArea;
-                window.Left = workingArea.Left;
-                window.Top = workingArea.Top;
-                window.Width = workingArea.Width;
-                window.Height = workingArea.Height;
-                // If window isn't loaded then maxmizing will result in the window displaying on the primary monitor
-                if (window.IsLoaded)
-                    window.WindowState = WindowState.Maximized;
-            }
+            //_pageManager.Navigate(typeof(MapPage));
         }
     }
 }

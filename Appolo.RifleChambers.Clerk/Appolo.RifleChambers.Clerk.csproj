@@ -14,6 +14,7 @@
     <None Remove="fonts\Kremlin Alexander.ttf" />
     <None Remove="fonts\MUROMETZ.TTF" />
     <None Remove="images\background.png" />
+    <None Remove="images\backspace.png" />
     <None Remove="images\BetweenShadow.png" />
     <None Remove="images\cancel.png" />
     <None Remove="images\clerk.png" />
@@ -23,6 +24,7 @@
     <None Remove="images\ink.png" />
     <None Remove="images\pergament.png" />
     <None Remove="images\pergament2.png" />
+    <None Remove="images\shift.png" />
     <None Remove="images\UpShadow.png" />
     <None Remove="images\WaitBackground.png" />
     <None Remove="images\WaitBackground2.png" />
@@ -41,6 +43,7 @@
     <Resource Include="fonts\Kremlin Alexander.ttf" />
     <Resource Include="fonts\MUROMETZ.TTF" />
     <Resource Include="images\background.png" />
+    <Resource Include="images\backspace.png" />
     <Resource Include="images\BetweenShadow.png" />
     <Resource Include="images\cancel.png" />
     <Resource Include="images\clerk.png" />
@@ -50,6 +53,7 @@
     <Resource Include="images\ink.png" />
     <Resource Include="images\pergament.png" />
     <Resource Include="images\pergament2.png" />
+    <Resource Include="images\shift.png" />
     <Resource Include="images\UpShadow.png" />
     <Resource Include="images\WaitBackground.png" />
     <Resource Include="images\WaitBackground2.png" />

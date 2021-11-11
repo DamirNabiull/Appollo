@@ -18,7 +18,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPFTabTipMixedHardware;
 
 namespace Appolo.RifleChambers.Clerk
 {
@@ -34,10 +33,6 @@ namespace Appolo.RifleChambers.Clerk
         {
             InitializeComponent();
             _pageManager = new PageManager(NavFrame);
-            TabTipAutomation.IgnoreHardwareKeyboard = WPFTabTipMixedHardware.Models.HardwareKeyboardIgnoreOptions.IgnoreAll;
-            TabTipAutomation.AutomationTriggers = TabTipAutomationTrigger.OnFocus;
-            TabTipAutomation.BindTo<TextBox>();
-
             new Thread(RunServer).Start();
         }
 
@@ -82,6 +77,20 @@ namespace Appolo.RifleChambers.Clerk
             var vars = context.Request.Url.ParseQueryString();
 
             _available = vars["available"] == "false" ? false : true;
+            if (_available)
+            {
+                this.Dispatcher.Invoke(new Action(() =>
+                {
+                    _pageManager.Navigate(typeof(Start));
+                }));
+            } 
+            else
+            {
+                this.Dispatcher.Invoke(new Action(() =>
+                {
+                    _pageManager.Navigate(typeof(Wait3));
+                }));
+            }
 
             Trace.WriteLine(_available);
 

@@ -10,7 +10,7 @@
 
     <Grid Height="1920" Width="1080">
         <Grid.Background>
-            <ImageBrush ImageSource="images/background.png"/>
+            <ImageBrush ImageSource="images/Background_0.png"/>
         </Grid.Background>
         <Grid Margin="0px 200px 0px 0px" Height="1720px">
             <Grid.ColumnDefinitions>

@@ -12,18 +12,18 @@
         <Grid.Background>
             <ImageBrush ImageSource="images/background.png"/>
         </Grid.Background>
-        <Grid Margin="105px 58px 0px 0px">
+        <Grid Margin="105px 55px 0px 0px">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1148"/>
-                <ColumnDefinition Width="501"/>
+                <ColumnDefinition Width="1102"/>
+                <ColumnDefinition Width="540"/>
             </Grid.ColumnDefinitions>
- 
-            <Image Grid.Column="0" Source="images/clerk.png" Width="1148px" VerticalAlignment="Top"/>
+
+            <Image Grid.Column="0" Source="images/clerk.png" Width="1102" VerticalAlignment="Top"/>
 
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="195"/>
-                    <RowDefinition Height="152"/>
+                    <RowDefinition Height="240"/>
                     <RowDefinition Height="65"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -32,7 +32,10 @@
                     <RowDefinition Height="152"/>
                 </Grid.RowDefinitions>
 
-                <Image Grid.Row="1" Source="images/ink.png" Stretch="Fill"/>
+                <TextBlock x:Name="For_Focus" Grid.Column="0" Grid.Row="1" Width="600" Foreground="#931931" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="70px" FontWeight="Bold">
+                            <Run>Присаживайся,
+                                коли грамоте обучен</Run>
+                </TextBlock>
 
                 <Image Grid.Row="3" Source="images/UpShadow.png" Width="422px"/>
 

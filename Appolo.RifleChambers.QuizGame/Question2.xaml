@@ -10,14 +10,26 @@
 
     <Grid Height="1920" Width="1080">
         <Grid.Background>
-            <ImageBrush ImageSource="images/background.png"/>
+            <ImageBrush ImageSource="images/Background_2.png"/>
         </Grid.Background>
+
+        <Grid Margin="0px 51px 0px 0px" Height="84" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="953"/>
+                <ColumnDefinition Width="85"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Exit" Click="Exit_Button" Grid.Column="1" Width="85" Style="{StaticResource TransparentStyle}">
+                <Image Source="images/cancel.png" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
         <Grid Margin="0px 200px 0px 0px" Height="1720px">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="600"/>
+                <RowDefinition Height="650"/>
                 <RowDefinition Height="81"/>
 
                 <RowDefinition Height="57"/>
@@ -25,7 +37,7 @@
 
                 <RowDefinition Height="108"/>
 
-                <RowDefinition Height="43"/>
+                <RowDefinition Height="10"/>
 
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>

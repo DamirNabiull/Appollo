@@ -153,7 +153,7 @@ namespace Appolo.RifleChambers.Clerk_VideoStand
                 return;
             }
             vlcController.Size = Size;
-            vlcController.Video.CropGeometry = $"{Width}:{Height}";
+            vlcController.Video.CropGeometry = $"{1080}:{1920}";
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

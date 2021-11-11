@@ -10,8 +10,20 @@
 
     <Grid Height="1920" Width="1080">
         <Grid.Background>
-            <ImageBrush ImageSource="images/background.png"/>
+            <ImageBrush ImageSource="images/Background_6.png"/>
         </Grid.Background>
+
+        <Grid Margin="0px 51px 0px 0px" Height="84" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="953"/>
+                <ColumnDefinition Width="85"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Exit" Click="Exit_Button" Grid.Column="1" Width="85" Style="{StaticResource TransparentStyle}">
+                <Image Source="images/cancel.png" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
         <Grid Margin="0px 200px 0px 0px" Height="1720px">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -71,7 +83,7 @@
                 </Grid.RowDefinitions>
 
                 <Image Grid.Column="0" Grid.Row="0" Source="images/UpShadow.png" Height="20" Stretch="Fill"/>
-                <Button Click="Correct_Click" Grid.Column="0" Grid.Row="1" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_1" Click="Correct_Click" Grid.Column="0" Grid.Row="1" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
@@ -82,7 +94,7 @@
 
                 <Image Grid.Column="0" Grid.Row="2" Source="images/BetweenShadow.png" Height="20px" Stretch="Fill"/>
 
-                <Button Click="Correct_Click" Grid.Column="0" Grid.Row="3" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_2" Click="Correct_Click" Grid.Column="0" Grid.Row="3" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
@@ -93,7 +105,7 @@
 
                 <Image Grid.Column="0" Grid.Row="4" Source="images/BetweenShadow.png" Height="20px" Stretch="Fill"/>
 
-                <Button Click="Incorrect_Click" Grid.Column="0" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_3" Click="Incorrect_Click" Grid.Column="0" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
@@ -107,7 +119,7 @@
 
 
                 <Image Grid.Column="2" Grid.Row="0" Source="images/UpShadow.png" Height="20px" Stretch="Fill"/>
-                <Button Click="Correct_Click" Grid.Column="2" Grid.Row="1" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_4" Click="Correct_Click" Grid.Column="2" Grid.Row="1" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
@@ -118,7 +130,7 @@
 
                 <Image Grid.Column="2" Grid.Row="2" Source="images/BetweenShadow.png" Height="20px" Stretch="Fill"/>
 
-                <Button Click="Incorrect_Click" Grid.Column="2" Grid.Row="3" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_5" Click="Incorrect_Click" Grid.Column="2" Grid.Row="3" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
@@ -129,7 +141,7 @@
 
                 <Image Grid.Column="2" Grid.Row="4" Source="images/BetweenShadow.png" Height="20px" Stretch="Fill"/>
 
-                <Button Click="Incorrect_Click" Grid.Column="2" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_6" Click="Incorrect_Click" Grid.Column="2" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
@@ -143,7 +155,7 @@
 
 
                 <Image Grid.Column="4" Grid.Row="0" Source="images/UpShadow.png" Height="20px" Stretch="Fill"/>
-                <Button Click="Correct_Click" Grid.Column="4" Grid.Row="1" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_7" Click="Correct_Click" Grid.Column="4" Grid.Row="1" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
@@ -154,7 +166,7 @@
 
                 <Image Grid.Column="4" Grid.Row="2" Source="images/BetweenShadow.png" Height="20px" Stretch="Fill"/>
 
-                <Button Click="Incorrect_Click" Grid.Column="4" Grid.Row="3" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_8" Click="Incorrect_Click" Grid.Column="4" Grid.Row="3" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
@@ -165,7 +177,7 @@
 
                 <Image Grid.Column="4" Grid.Row="4" Source="images/BetweenShadow.png" Height="20px" Stretch="Fill"/>
 
-                <Button Click="Incorrect_Click" Grid.Column="4" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
+                <Button x:Name="button_9" Click="Incorrect_Click" Grid.Column="4" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
                         <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">

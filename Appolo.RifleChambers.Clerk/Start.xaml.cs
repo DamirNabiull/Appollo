@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +21,7 @@ namespace Appolo.RifleChambers.Clerk
 {
     public partial class Start : Page, IPageManagerHandler
     {
+        private HttpClient _client = new HttpClient();
         private PageManager _pageManager;
         public Start()
         {
@@ -49,12 +52,15 @@ namespace Appolo.RifleChambers.Clerk
 
         private void Start_Click(object sStarter, RoutedEventArgs e)
         {
+            Trace.WriteLine(MainWindow._available);
             if (MainWindow._available)
             {
-                HttpClient _client = new HttpClient();
                 _client.GetAsync($"{Config<AppConfig>.Value.SecondSensor}?available=false");
                 _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=1");
-                _pageManager.Navigate(typeof(Name));
+                this.Dispatcher.Invoke(new Action(() =>
+                {
+                    _pageManager.Navigate(typeof(Name));
+                }));
             }
         }
     }

@@ -26,6 +26,7 @@ namespace Appolo.RifleChambers.Map_Menu
         {
             InitializeComponent();
             _pageManager = new PageManager(NavFrame);
+            //Process.Start(@"C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Map_Projector\bin\x64\Release\net6.0-windows\Appolo.RifleChambers.Map_Projector");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

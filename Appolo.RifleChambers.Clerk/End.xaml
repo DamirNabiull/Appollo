@@ -34,7 +34,7 @@
                     <RowDefinition Height="152"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Column="0" Grid.Row="1" Width="542" Foreground="#931931" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" TextAlignment="Center" FontSize="100px" FontWeight="Bold">
+                <TextBlock x:Name="For_Focus" Grid.Column="0" Grid.Row="1" Width="542" Foreground="#931931" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" TextAlignment="Center" FontSize="100px" FontWeight="Bold">
                     <Run>гонец отправлен</Run>
                 </TextBlock>
 

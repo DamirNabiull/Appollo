@@ -10,6 +10,7 @@ using System.Net.Mime;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -30,23 +31,25 @@ namespace Appolo.RifleChambers.Clerk
         private PageManager _pageManager;
         private String _email;
         private HttpClient _client = new HttpClient();
+        private Timer _timer, new_timer, _long;
+        private bool _time = false, _shift = false;
 
-        [DllImport("user32.dll")]
-        public static extern long LoadKeyboardLayout(string pwszKLID, uint Flags);
-        [DllImport("user32.dll")]
-        public static extern long GetKeyboardLayoutName(System.Text.StringBuilder pwszKLID);
         public Email()
         {
             InitializeComponent();
-            InputLanguageManager.SetInputLanguage(Email_Field, CultureInfo.CreateSpecificCulture("en"));
-            LoadKeyboardLayout("00000409", 1);
         }
 
         public PageManager PageManager { get => _pageManager; set => _pageManager = value; }
 
         public void PreNavigate(NavigationToArgs args)
         {
+            Email_Field.Text = "";
+            Incorrect_Field.Text = "";
+            _email = "";
 
+            _long = new Timer(60000);
+            _long.Elapsed += Exit_Function;
+            _long.Start();
         }
 
         public void AfterNavigate(NavigationToArgs args)
@@ -62,6 +65,11 @@ namespace Appolo.RifleChambers.Clerk
         public void PreNavigateFrom(NavigationFromArgs args)
         {
 
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private MailMessage GetMailWithImg()
@@ -105,8 +113,11 @@ namespace Appolo.RifleChambers.Clerk
                 MailMessage mailWithImg = GetMailWithImg();
                 client.Send(mailWithImg);
 
+                Email_Field.Text = "";
+
                 _pageManager.Navigate(typeof(Wait2));
-            } catch
+            } 
+            catch
             {
                 Incorrect_Field.Text = "Некоректная почта";
             }
@@ -114,16 +125,69 @@ namespace Appolo.RifleChambers.Clerk
 
         private void Send_Click(object sStarter, RoutedEventArgs e)
         {
-            _email = Email_Field.Text.ToString();
-            Trace.WriteLine(_email);
-            SendMessage();
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                _long.Stop();
+                _email = Email_Field.Text.ToString();
+                Trace.WriteLine(_email);
+                SendMessage();
+            })); 
         }
 
         private void Exit_Button(object sStarter, RoutedEventArgs e)
         {
-            _client.GetAsync($"{Config<AppConfig>.Value.SecondSensor}?available=true");
-            _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=0");
-            _pageManager.Navigate(typeof(Start));
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                _long.Stop();
+                _client.GetAsync($"{Config<AppConfig>.Value.SecondSensor}?available=true");
+                _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=0");
+                Email_Field.Text = "";
+                _pageManager.Navigate(typeof(Start));
+            }));
+        }
+
+        private void Exit_Function(object sender, ElapsedEventArgs e)
+        {
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                _long.Stop();
+                _client.GetAsync($"{Config<AppConfig>.Value.SecondSensor}?available=true");
+                _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=0");
+                Email_Field.Text = "";
+                _pageManager.Navigate(typeof(Start));
+            }));
+        }
+
+        private void Keyboard_Shift_Clcik(object sender, RoutedEventArgs e)
+        {
+            _shift = true;
+        }
+
+        private void Keyboard_Clcik(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            String text = ((TextBlock)button.Content).Text.ToString();
+            if (_shift)
+            {
+                _email += text.ToUpper();
+                Email_Field.Text = _email;
+                _shift = false;
+            }
+            else
+            {
+                _email += text;
+                Email_Field.Text = _email;
+            }
+            
+        }
+
+        private void Keyboard_Backspace_Clcik(object sender, RoutedEventArgs e)
+        {
+            if (_email.Length > 0)
+            {
+                _email = _email.Remove(_email.Length - 1);
+                Email_Field.Text = _email;
+            }
         }
     }
 }

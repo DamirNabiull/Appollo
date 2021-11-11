@@ -29,7 +29,9 @@ namespace Appolo.RifleChambers.QuizGame
 
         public void PreNavigate(NavigationToArgs args)
         {
-
+            _needed = 1;
+            _correct = 0;
+            Set_Default();
         }
 
         public void AfterNavigate(NavigationToArgs args)
@@ -45,6 +47,11 @@ namespace Appolo.RifleChambers.QuizGame
         public void PreNavigateFrom(NavigationFromArgs args)
         {
 
+        }
+
+        private void Exit_Button(object sender, RoutedEventArgs e)
+        {
+            _pageManager.Navigate(typeof(Start));
         }
 
         private void Correct_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -102,6 +109,10 @@ namespace Appolo.RifleChambers.QuizGame
             ((Image)((Grid)button_1.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
             ((Image)((Grid)button_2.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
             ((Image)((Grid)button_3.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+
+            ((TextBlock)next_page_button.Content).Foreground = App.Current.Resources["nextButtonDisable"] as SolidColorBrush;
+            next_page_button.IsEnabled = false;
+            Definition.Visibility = Visibility.Hidden;
         }
     }
 }

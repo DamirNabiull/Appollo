@@ -8,10 +8,14 @@
         Loaded="Window_Loaded"
         WindowStyle="None"
         Title="MainWindow" 
+        Closing="Window_Closing"
         Height="1080" Width="1920">
-    <Grid>
-        <Viewbox Grid.Row="1" Grid.Column="1" Stretch="Uniform">
-            <Frame x:Name="NavFrame" Width="1920px" Height="1080px" NavigationUIVisibility="Hidden"></Frame>
-        </Viewbox>
+    <Grid Height="1080" Width="1920">
+        <Grid Height="1080" Width="1920">
+            <Grid.Background>
+                <ImageBrush x:Name="Photo" ImageSource="images/default.png"/>
+            </Grid.Background>
+            <Image x:Name="New_Photo"  Height="1080" Width="1920" Stretch="Fill"></Image>
+        </Grid>
     </Grid>
 </Window>

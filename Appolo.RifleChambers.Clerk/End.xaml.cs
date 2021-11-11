@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFTabTipMixedHardware;
 
 namespace Appolo.RifleChambers.Clerk
 {
@@ -30,7 +32,7 @@ namespace Appolo.RifleChambers.Clerk
 
         public void PreNavigate(NavigationToArgs args)
         {
-
+            
         }
 
         public void AfterNavigate(NavigationToArgs args)
@@ -50,7 +52,18 @@ namespace Appolo.RifleChambers.Clerk
 
         private void Start_Click(object sStarter, RoutedEventArgs e)
         {
-            _pageManager.Navigate(typeof(Start));
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                _pageManager.Navigate(typeof(Start));
+            }));
+        }
+
+        private void Exit_Function(object sender, ElapsedEventArgs e)
+        {
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                _pageManager.Navigate(typeof(Start));
+            }));
         }
     }
 }

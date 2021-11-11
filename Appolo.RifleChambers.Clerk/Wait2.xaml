@@ -25,7 +25,7 @@
         </Grid>
 
         <Grid>
-            <Image Margin="107 58 164 114" Height="908" Width="1649" Source="images/WaitBackground2.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image x:Name="For_Focus" Margin="107 58 164 114" Height="908" Width="1649" Source="images/WaitBackground2.png" Stretch="Fill" VerticalAlignment="Top"/>
         </Grid>
 
     </Grid>

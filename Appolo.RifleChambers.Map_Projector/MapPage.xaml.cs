@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Net;
 using System.Windows.Media.Animation;
+using System.IO;
 
 namespace Appolo.RifleChambers.Map_Projector
 {
@@ -27,15 +28,15 @@ namespace Appolo.RifleChambers.Map_Projector
     public partial class MapPage : Page, IPageManagerHandler
     {
         private PageManager _pageManager;
-        private static bool _isInProgress = false;
         public PageManager PageManager { get => _pageManager; set => _pageManager = value; }
         public MapPage()
         {
             InitializeComponent();
-            Photo.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Appolo.RifleChambers.Map_Projector;component/images/default.png"));
+            Photo.ImageSource = new BitmapImage(new Uri(@$"images/default.png", UriKind.Relative));
             new Thread(RunServer).Start();
         }
 
+        private static bool _isInProgress = false;
         private HttpListener _listener;
         private bool _server = true;
         private void RunServer()
@@ -43,8 +44,8 @@ namespace Appolo.RifleChambers.Map_Projector
             try
             {
                 _listener = new HttpListener();
-                //NetAclChecker.AddAddress("http://*:3001/play/");
-                //NetAclChecker.AddAddress("http://+:3001/play/");
+                NetAclChecker.AddAddress("http://*:3001/play/");
+                NetAclChecker.AddAddress("http://+:3001/play/");
                 _listener.Prefixes.Add("http://*:3001/play/");
                 _listener.Prefixes.Add("http://+:3001/play/");
 
@@ -149,6 +150,29 @@ namespace Appolo.RifleChambers.Map_Projector
                 match = match.NextMatch();
             }
             return paramaters;
+        }
+    }
+
+    public static class NetAclChecker
+    {
+        public static void AddAddress(string address)
+        {
+            AddAddress(address, Environment.UserDomainName, Environment.UserName);
+        }
+
+        public static void AddAddress(string address, string domain, string user)
+        {
+            string args = string.Format(@"http add urlacl url={0} user={1}\{2}", address, domain, user);
+
+            Debug.WriteLine(args);
+
+            ProcessStartInfo psi = new ProcessStartInfo("netsh", args);
+            psi.Verb = "runas";
+            psi.CreateNoWindow = true;
+            psi.WindowStyle = ProcessWindowStyle.Hidden;
+            psi.UseShellExecute = true;
+
+            Process.Start(psi).WaitForExit();
         }
     }
 }

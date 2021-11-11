@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -56,6 +58,7 @@ namespace Appolo.RifleChambers.QuizGame
         public object GetPageInstance(Type type)
         {
             ThrowIfDisposed();
+
             if (TypeToObjectDictionary.ContainsKey(type))
                 return TypeToObjectDictionary[type];
             else
@@ -66,7 +69,7 @@ namespace Appolo.RifleChambers.QuizGame
                 {
                     ((IPageManagerHandler)obj).PageManager = this;
                 }
-                //TypeToObjectDictionary.Add(type, obj);
+                TypeToObjectDictionary.Add(type, obj);
                 return obj;
             }
         }
@@ -92,13 +95,32 @@ namespace Appolo.RifleChambers.QuizGame
                 {
                     var p = (IPageManagerHandler)CurrentPage;
                     p.PreNavigateFrom(fromArgs);
+                    p = null;
+                    //CancelEventArgs cancelParams = new CancelEventArgs();
+                    //NameAcceptanceEvent.DynamicInvoke(new object[] { CurrentPage, cancelParams });
                 }
                 if (obj is IPageManagerHandler)
                 {
                     var p = (IPageManagerHandler)obj;
                     p.PreNavigate(toArgs);
+                    p = null;
                 }
+
+                //CurrentPage = null;
+
+                try
+                {
+                    GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+                    GC.Collect(2, GCCollectionMode.Forced); // find finalizable objects
+                    //GC.SuppressFinalize(CurrentPage);
+                    GC.WaitForPendingFinalizers(); // wait until finalizers executed
+                    GC.Collect(2, GCCollectionMode.Forced);
+                    Trace.WriteLine($"Memory used after full collection:   {GC.GetTotalMemory(true)}");
+                }
+                catch (Exception ex) { Trace.WriteLine(ex); }
+
                 PreNavigation?.Invoke(this, obj.GetType());
+
             };
             Action exitNavigation = () =>
             {
@@ -107,15 +129,28 @@ namespace Appolo.RifleChambers.QuizGame
                 {
                     var p = (IPageManagerHandler)obj;
                     p.AfterNavigate(toArgs);
+                    p = null;
                 }
                 if (CurrentPage is IPageManagerHandler)
                 {
                     var p = (IPageManagerHandler)CurrentPage;
                     p.AfterNavigateFrom(fromArgs);
+                    p = null;
+                    //CancelEventArgs cancelParams = new CancelEventArgs();
+                    //NameAcceptanceEvent.DynamicInvoke(new object[] { CurrentPage, cancelParams });
                 }
 
                 AfterNavigation?.Invoke(this, obj.GetType());
-                CurrentPage = obj;
+                try
+                {
+                    GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+                    GC.Collect(2, GCCollectionMode.Forced); // find finalizable objects
+                    //GC.SuppressFinalize(CurrentPage);
+                    GC.WaitForPendingFinalizers(); // wait until finalizers executed
+                    GC.Collect(2, GCCollectionMode.Forced);
+                    Trace.WriteLine($"Memory used after full collection:   {GC.GetTotalMemory(true)}");
+                }
+                catch (Exception ex) { Trace.WriteLine(ex); }
             };
 
             if (TransitionHandler == null)

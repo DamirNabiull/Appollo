@@ -10,8 +10,20 @@
 
     <Grid Height="1920" Width="1080">
         <Grid.Background>
-            <ImageBrush ImageSource="images/background.png"/>
+            <ImageBrush ImageSource="images/Background_8.png"/>
         </Grid.Background>
+
+        <Grid Margin="0px 51px 0px 0px" Height="84" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="953"/>
+                <ColumnDefinition Width="85"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Exit" Click="Exit_Button" Grid.Column="1" Width="85" Style="{StaticResource TransparentStyle}">
+                <Image Source="images/cancel.png" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
         <Grid Margin="0px 200px 0px 0px" Height="1720px">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -57,7 +69,7 @@
             <Button x:Name="button_1" Click="Incorrect_Click" Grid.Column="0" Grid.Row="8" Width="580px" Style="{StaticResource TransparentStyle}">
                 <Grid>
                     <Image Source="images/DefaultButton.png" Width="580px"/>
-                    <TextBlock Grid.Column="0" Grid.Row="0" Width="450px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="35px" FontWeight="Bold">
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="425px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="35px" FontWeight="Bold">
                         <Run>Пищаль, вязня с рогом, рогатина</Run>
                     </TextBlock>
                 </Grid>

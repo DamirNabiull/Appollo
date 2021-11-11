@@ -25,6 +25,9 @@
     <Compile Update="Wait.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Wait3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Accept.xaml">
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Wait.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Wait3.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

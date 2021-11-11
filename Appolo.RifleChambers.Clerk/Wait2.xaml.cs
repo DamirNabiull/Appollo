@@ -26,16 +26,15 @@ namespace Appolo.RifleChambers.Clerk
         public Wait2()
         {
             InitializeComponent();
-            _timer = new Timer(3000);
-            _timer.Elapsed += Go_To_End_Page;
-            _timer.Start();
         }
 
         public PageManager PageManager { get => _pageManager; set => _pageManager = value; }
 
         public void PreNavigate(NavigationToArgs args)
         {
-
+            _timer = new Timer(3000);
+            _timer.Elapsed += Go_To_End_Page;
+            _timer.Start();
         }
 
         public void AfterNavigate(NavigationToArgs args)
@@ -55,7 +54,7 @@ namespace Appolo.RifleChambers.Clerk
 
         private void Go_To_End_Page(object sender, ElapsedEventArgs e)
         {
-            Application.Current.Dispatcher.Invoke(new Action(() =>
+            this.Dispatcher.Invoke(new Action(() =>
             {
                 _client.GetAsync($"{Config<AppConfig>.Value.SecondSensor}?available=true");
                 _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=0");
@@ -66,10 +65,13 @@ namespace Appolo.RifleChambers.Clerk
 
         private void Exit_Button(object sStarter, RoutedEventArgs e)
         {
-            _client.GetAsync($"{Config<AppConfig>.Value.SecondSensor}?available=true");
-            _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=0");
-            _timer.Stop();
-            _pageManager.Navigate(typeof(Start));
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                _client.GetAsync($"{Config<AppConfig>.Value.SecondSensor}?available=true");
+                _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=0");
+                _timer.Stop();
+                _pageManager.Navigate(typeof(Start));
+            }));
         }
     }
 }

@@ -29,7 +29,9 @@ namespace Appolo.RifleChambers.QuizGame
 
         public void PreNavigate(NavigationToArgs args)
         {
-
+            correct = 0;
+            _answered = 0;
+            Set_Default();
         }
 
         public void AfterNavigate(NavigationToArgs args)
@@ -45,6 +47,37 @@ namespace Appolo.RifleChambers.QuizGame
         public void PreNavigateFrom(NavigationFromArgs args)
         {
 
+        }
+
+        private void Exit_Button(object sender, RoutedEventArgs e)
+        {
+            _pageManager.Navigate(typeof(Start));
+        }
+
+        private void Set_Default()
+        {
+            ((TextBlock)((Grid)button_1.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+            ((TextBlock)((Grid)button_2.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+            ((TextBlock)((Grid)button_3.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+            ((TextBlock)((Grid)button_4.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+            ((TextBlock)((Grid)button_5.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+            ((TextBlock)((Grid)button_6.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+            ((TextBlock)((Grid)button_7.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+            ((TextBlock)((Grid)button_8.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+            ((TextBlock)((Grid)button_9.Content).Children[1]).Foreground = App.Current.Resources["unpressedButton"] as SolidColorBrush;
+
+            ((Image)((Grid)button_1.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+            ((Image)((Grid)button_2.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+            ((Image)((Grid)button_3.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+            ((Image)((Grid)button_4.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+            ((Image)((Grid)button_5.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+            ((Image)((Grid)button_6.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+            ((Image)((Grid)button_7.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+            ((Image)((Grid)button_8.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+            ((Image)((Grid)button_9.Content).Children[0]).Source = new BitmapImage(new Uri(@$"images/DefaultButton.png", UriKind.Relative));
+
+            ((TextBlock)next_page_button.Content).Foreground = App.Current.Resources["nextButtonDisable"] as SolidColorBrush;
+            next_page_button.IsEnabled = false;
         }
 
         private void Correct_Click(object sender, System.Windows.RoutedEventArgs e)
