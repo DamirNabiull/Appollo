@@ -100,22 +100,31 @@ namespace Appolo.RifleChambers.Clerk
         {
             try
             {
-                SmtpClient client = new SmtpClient();
-                client.Host = "smtp.yandex.com";
-                client.Port = 587; // Обратите внимание что порт 587
-                client.EnableSsl = true;
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(Config<AppConfig>.Value.Mail, Config<AppConfig>.Value.Password); // Ваши логин и пароль
+                int found = _email.IndexOf("@");
+                if (_email.Substring(found + 2).Contains("."))
+                {
+                    SmtpClient client = new SmtpClient();
+                    client.Host = "smtp.yandex.com";
+                    client.Port = 587; // Обратите внимание что порт 587
+                    client.EnableSsl = true;
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = new NetworkCredential(Config<AppConfig>.Value.Mail, Config<AppConfig>.Value.Password); // Ваши логин и пароль
 
-                Trace.WriteLine(Config<AppConfig>.Value.Mail);
-                Trace.WriteLine(Config<AppConfig>.Value.Password);
+                    Trace.WriteLine(Config<AppConfig>.Value.Mail);
+                    Trace.WriteLine(Config<AppConfig>.Value.Password);
 
-                MailMessage mailWithImg = GetMailWithImg();
-                client.Send(mailWithImg);
+                    MailMessage mailWithImg = GetMailWithImg();
+                    client.Send(mailWithImg);
 
-                Email_Field.Text = "";
+                    Email_Field.Text = "";
 
-                _pageManager.Navigate(typeof(Wait2));
+                    _pageManager.Navigate(typeof(Wait2));
+                }
+                else
+                {
+                    Incorrect_Field.Text = "Некоректная почта";
+                }
+                
             } 
             catch
             {

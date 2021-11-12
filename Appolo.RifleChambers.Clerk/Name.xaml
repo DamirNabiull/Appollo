@@ -59,7 +59,7 @@
 
                 <Image Grid.Column="1" Source="images/ink.png" Height="109" Stretch="Fill" VerticalAlignment="Top"/>
 
-                <TextBox x:Name="Field" InputLanguageManager.InputLanguage="ru-RU" Grid.Column="3" Height="100px" FontFamily="{StaticResource Murometz}" Foreground="#332721" Background="#E7D7BE" BorderThickness="3px" BorderBrush="#FFFFFF" VerticalAlignment="Bottom" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="60px"></TextBox>
+                <TextBox x:Name="Field" Grid.Column="3" Height="100px" FontFamily="{StaticResource Murometz}" Foreground="#332721" Background="#E7D7BE" BorderThickness="3px" BorderBrush="#FFFFFF" VerticalAlignment="Bottom" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="60px" Focusable="False"></TextBox>
 
                 <Image Grid.Column="5" Source="images/ink.png" Height="109" Stretch="Fill" VerticalAlignment="Top"/>
             </Grid>

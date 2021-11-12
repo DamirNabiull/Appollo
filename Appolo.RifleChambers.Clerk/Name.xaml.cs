@@ -44,8 +44,6 @@ namespace Appolo.RifleChambers.Clerk
             Field.Text = "";
             _name = "";
 
-            Field.Focus();
-
             _long = new Timer(60000);
             _long.Elapsed += Exit_Function;
             _long.Start();

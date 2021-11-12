@@ -63,7 +63,7 @@
 
                 <Image Grid.Column="1" Source="images/ink.png" Height="109" Stretch="Fill" VerticalAlignment="Top"/>
 
-                <TextBox x:Name="Email_Field" InputLanguageManager.InputLanguage="en" InputScope="EmailSmtpAddress" Grid.Column="3" Height="100px" FontFamily="Inter" Foreground="#332721" Background="#E7D7BE" BorderThickness="3px" BorderBrush="#FFFFFF" VerticalAlignment="Bottom" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="50px" FontWeight="Bold"></TextBox>
+                <TextBox x:Name="Email_Field" Grid.Column="3" Height="100px" FontFamily="Inter" Foreground="#332721" Background="#E7D7BE" BorderThickness="3px" BorderBrush="#FFFFFF" VerticalAlignment="Bottom" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="50px" FontWeight="Bold" Focusable="False"></TextBox>
 
                 <Image Grid.Column="5" Source="images/ink.png" Height="109" Stretch="Fill" VerticalAlignment="Top"/>
             </Grid>

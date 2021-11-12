@@ -93,7 +93,7 @@ namespace Appolo.RifleChambers.Clerk
                 text.MaxTextHeight = 79;
                 text.TextAlignment = TextAlignment.Center;
 
-                var background = new BitmapImage(new Uri(@$"images/pergament2.png", UriKind.Relative));
+                var background = new BitmapImage(new Uri("pack://application:,,,/Appolo.RifleChambers.Clerk;component/images/pergament2.png")); ;
 
                 Rect rect = new Rect();
                 rect.X = 0;
@@ -116,6 +116,7 @@ namespace Appolo.RifleChambers.Clerk
                 {
                     png.Save(stm);
                 }
+                
 
                 _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=2");
 
