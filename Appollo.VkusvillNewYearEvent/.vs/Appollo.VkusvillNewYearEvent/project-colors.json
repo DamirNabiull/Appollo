@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "73715128-8615-4613-bea6-24ed339783bc": {
+      "ProjectGuid": "73715128-8615-4613-bea6-24ed339783bc",
+      "DisplayName": "Appollo.VkusvillNewYearEvent",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

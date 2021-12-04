@@ -47,4 +47,3 @@ C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.QuizGame\obj\Release\net6.0-
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.QuizGame\obj\Release\net6.0-windows\ref\Appolo.RifleChambers.QuizGame.dll
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.QuizGame\obj\Release\net6.0-windows\Appolo.RifleChambers.QuizGame.pdb
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.QuizGame\obj\Release\net6.0-windows\Appolo.RifleChambers.QuizGame.genruntimeconfig.cache
-C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.QuizGame\obj\Release\net6.0-windows\Appolo.RifleChambers.QuizGame.csproj.AssemblyReference.cache

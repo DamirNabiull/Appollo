@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\bottom_start.png" />
+    <None Remove="images\lights.png" />
+    <None Remove="images\rectangle.png" />
+    <None Remove="images\start_button.png" />
+    <None Remove="images\start_top.png" />
+    <None Remove="images\top.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Emgu.CV" Version="4.5.4.4788" />
+    <PackageReference Include="Emgu.CV.Bitmap" Version="4.5.4.4788" />
+    <PackageReference Include="Emgu.CV.UI" Version="4.5.4.4788" />
+    <PackageReference Include="MJPEG-Decoder" Version="1.2.0" />
+    <PackageReference Include="Simple-HTTP" Version="1.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\bottom_start.png" />
+    <Resource Include="images\lights.png" />
+    <Resource Include="images\rectangle.png" />
+    <Resource Include="images\start_button.png" />
+    <Resource Include="images\start_top.png" />
+    <Resource Include="images\top.png" />
+  </ItemGroup>
+
+</Project>

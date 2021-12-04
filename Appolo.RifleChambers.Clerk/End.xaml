@@ -22,20 +22,22 @@
 
             <Image Grid.Column="0" Source="images/Gonec.png" Width="925px" VerticalAlignment="Top"/>
 
-            <Grid Grid.Column="2">
+            <Grid Grid.Column="2" Margin="0 -50 0 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="102"/>
-                    <RowDefinition Height="230"/>
+                    <RowDefinition Height="460"/>
                     <RowDefinition Height="52"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="3"/>
-                    <RowDefinition Height="152"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="For_Focus" Grid.Column="0" Grid.Row="1" Width="542" Foreground="#931931" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" TextAlignment="Center" FontSize="100px" FontWeight="Bold">
-                    <Run>гонец отправлен</Run>
+                <TextBlock x:Name="For_Focus" Grid.Column="0" Grid.Row="1" Width="542" Foreground="#931931" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" TextAlignment="Center" FontSize="80px" FontWeight="Bold">
+                    <Run>Гонец с
+грамотой
+отправлен,
+проверь
+свой e-mail</Run>
                 </TextBlock>
 
                 <Image Grid.Row="3" Source="images/UpShadow.png" Width="422px"/>
@@ -50,8 +52,6 @@
                 </Button>
 
                 <Image Grid.Row="5" Source="images/DownShadow.png" Width="422px"/>
-
-                <Image Grid.Row="7" Source="images/ink.png" Stretch="Fill"/>
 
             </Grid>
         </Grid>

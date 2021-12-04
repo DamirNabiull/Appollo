@@ -4,7 +4,6 @@ C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\bin\x64\Rel
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\bin\x64\Release\Vlc.DotNet.Core.dll
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\bin\x64\Release\Vlc.DotNet.Core.Interops.dll
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\bin\x64\Release\Vlc.DotNet.Forms.dll
-C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Release\Appolo.RifleChambers.Clerk_VideoStand.csproj.AssemblyReference.cache
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Release\Appolo.RifleChambers.Clerk_VideoStand.csproj.SuggestedBindingRedirects.cache
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Release\Appolo.RifleChambers.Clerk_VideoStand.Properties.Resources.resources
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Release\Appolo.RifleChambers.Clerk_VideoStand.csproj.GenerateResource.cache
@@ -12,3 +11,4 @@ C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Rel
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Release\Appolo.RifleChambers.Clerk_VideoStand.exe
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Release\Appolo.RifleChambers.Clerk_VideoStand.pdb
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Release\Appolo.RifleChambers.Clerk_VideoStand.Form1.resources
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk_VideoStand\obj\x64\Release\Appolo.RifleChambers.Clerk_VideoStand.csproj.CopyComplete

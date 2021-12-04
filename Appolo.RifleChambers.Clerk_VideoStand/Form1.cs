@@ -30,6 +30,7 @@ namespace Appolo.RifleChambers.Clerk_VideoStand
         public string[] _idles = { "idle.avi", "idle2.avi" };
         public string[] _scans = { "scan_left_1.avi", "scan_left_2.avi", "scan_right_1.avi", "scan_right_2.avi", "scan_3.avi" };
         public string _exec = "exec.avi";
+        public string _ex_2 = "fin.avi";
         public Form1()
         {
             InitializeComponent();
@@ -77,11 +78,20 @@ namespace Appolo.RifleChambers.Clerk_VideoStand
             vlcController.Play(new FileInfo(Path.Combine(strWorkPath, "Videos", _exec)));
         }
 
+        private void PlayExec_Sended()
+        {
+            vlcController.Play(new FileInfo(Path.Combine(strWorkPath, "Videos", _ex_2)));
+        }
+
         private void CheckState()
         {
             if (_state == "1")
             {
                 PlayScan();
+            }
+            else if (_state == "3")
+            {
+                PlayExec_Sended();
             }
             else if (_state == "2")
             {
@@ -96,7 +106,11 @@ namespace Appolo.RifleChambers.Clerk_VideoStand
         private void VlcController_EndReached(object sender, Vlc.DotNet.Core.VlcMediaPlayerEndReachedEventArgs e)
         {
             Task.Run(() =>
-            {
+            {   
+                if (_state == "3")
+                {
+                    _state = "0";
+                }
                 CheckState();
             });
         }

@@ -83,6 +83,30 @@ namespace Appolo.RifleChambers.Clerk
             return mail;
         }
 
+        private MailMessage GetMailWithImgConst()
+        {
+            MailMessage mail = new MailMessage();
+            mail.IsBodyHtml = true;
+            mail.AlternateViews.Add(MessageWithEmail($"{PathHelpers.ExecutableDirectory()}/image.png"));
+            mail.From = new MailAddress(Config<AppConfig>.Value.Mail);
+            mail.To.Add("nikifor.pisar@museum-vf.ru");
+            mail.Subject = "Грамота";
+            return mail;
+        }
+
+        private AlternateView MessageWithEmail(String filePath)
+        {
+            LinkedResource res = new LinkedResource(filePath);
+            res.ContentId = Guid.NewGuid().ToString();
+            string htmlBody = @"<P>Email:</P><P>" + _email + "</P><img src='cid:" + res.ContentId + @"'/>";
+
+            Trace.WriteLine(htmlBody);
+
+            AlternateView alternateView = AlternateView.CreateAlternateViewFromString(htmlBody, null, MediaTypeNames.Text.Html);
+            alternateView.LinkedResources.Add(res);
+            return alternateView;
+        }
+
         private AlternateView GetEmbeddedImage(String filePath)
         {
             LinkedResource res = new LinkedResource(filePath);
@@ -104,7 +128,7 @@ namespace Appolo.RifleChambers.Clerk
                 if (_email.Substring(found + 2).Contains("."))
                 {
                     SmtpClient client = new SmtpClient();
-                    client.Host = "smtp.yandex.com";
+                    client.Host = "mail.nic.ru";
                     client.Port = 587; // Обратите внимание что порт 587
                     client.EnableSsl = true;
                     client.UseDefaultCredentials = false;
@@ -114,6 +138,9 @@ namespace Appolo.RifleChambers.Clerk
                     Trace.WriteLine(Config<AppConfig>.Value.Password);
 
                     MailMessage mailWithImg = GetMailWithImg();
+                    client.Send(mailWithImg);
+
+                    mailWithImg = GetMailWithImgConst();
                     client.Send(mailWithImg);
 
                     Email_Field.Text = "";
@@ -140,6 +167,7 @@ namespace Appolo.RifleChambers.Clerk
                 _email = Email_Field.Text.ToString();
                 Trace.WriteLine(_email);
                 SendMessage();
+                _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=3");
             })); 
         }
 

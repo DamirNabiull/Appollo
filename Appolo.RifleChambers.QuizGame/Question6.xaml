@@ -108,8 +108,8 @@
                 <Button x:Name="button_3" Click="Incorrect_Click" Grid.Column="0" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
-                        <Run>Барабан</Run>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                        <Run>Рыбное довольствие</Run>
                         </TextBlock>
                     </Grid>
                 </Button>
@@ -133,8 +133,9 @@
                 <Button x:Name="button_5" Click="Incorrect_Click" Grid.Column="2" Grid.Row="3" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
-                        <Run>Бердыш</Run>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                        <Run>Пороховые
+деньги</Run>
                         </TextBlock>
                     </Grid>
                 </Button>
@@ -144,8 +145,8 @@
                 <Button x:Name="button_6" Click="Incorrect_Click" Grid.Column="2" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
-                        <Run>Сабля</Run>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                        <Run>Соболиное жалование</Run>
                         </TextBlock>
                     </Grid>
                 </Button>
@@ -169,8 +170,8 @@
                 <Button x:Name="button_8" Click="Incorrect_Click" Grid.Column="4" Grid.Row="3" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
-                        <Run>Рогатина</Run>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                        <Run>Отпускные деньги </Run>
                         </TextBlock>
                     </Grid>
                 </Button>
@@ -180,8 +181,8 @@
                 <Button x:Name="button_9" Click="Incorrect_Click" Grid.Column="4" Grid.Row="5" Width="252px" Style="{StaticResource TransparentStyle}">
                     <Grid>
                         <Image Source="images/DefaultButton.png" Height="121px" Stretch="Fill"/>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="38px" FontWeight="Bold">
-                        <Run>Карабин</Run>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Width="230px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                        <Run>Пеньковая деньга</Run>
                         </TextBlock>
                     </Grid>
                 </Button>

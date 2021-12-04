@@ -112,7 +112,7 @@ namespace Appolo.RifleChambers.Map_Projector
                         From = 0,
                         To = 1,
                         BeginTime = TimeSpan.FromSeconds(0),
-                        Duration = TimeSpan.FromSeconds(2),
+                        Duration = TimeSpan.FromSeconds(1),
                     };
 
                     animation.Completed += (s, a) => New_Photo.Opacity = 1.0;
@@ -126,7 +126,7 @@ namespace Appolo.RifleChambers.Map_Projector
                         From = 1,
                         To = 0,
                         BeginTime = TimeSpan.FromSeconds(0),
-                        Duration = TimeSpan.FromSeconds(2),
+                        Duration = TimeSpan.FromSeconds(1),
                     };
 
                     animation.Completed += (s, a) => New_Photo.Opacity = 0.0;

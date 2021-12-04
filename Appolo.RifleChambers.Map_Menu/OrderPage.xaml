@@ -13,14 +13,14 @@
             <ImageBrush ImageSource="images/background.png"/>
         </Grid.Background>
 
-        <Grid Margin="0px 41px 0px 0px" Height="84" VerticalAlignment="Top">
+        <Grid Margin="0px 21px 0px 0px" Height="104" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1785"/>
-                <ColumnDefinition Width="84"/>
+                <ColumnDefinition Width="1783"/>
+                <ColumnDefinition Width="88"/>
             </Grid.ColumnDefinitions>
 
-            <Button Click="Exit_Click" Grid.Column="1" Width="84" Style="{StaticResource TransparentStyle}">
-                <Image Source="images/cancel.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Button Click="Exit_Click" Grid.Column="1" Width="88" Style="{StaticResource TransparentStyle}">
+                <Image  Height="108" Source="images/cancel.png" Stretch="Fill" VerticalAlignment="Top"/>
             </Button>
         </Grid>
 

@@ -57,7 +57,7 @@ namespace Appolo.RifleChambers.Clerk
             this.Dispatcher.Invoke(new Action(() =>
             {
                 _client.GetAsync($"{Config<AppConfig>.Value.SecondSensor}?available=true");
-                _client.GetAsync($"{Config<AppConfig>.Value.Player}?state=0");
+                //_client.GetAsync($"{Config<AppConfig>.Value.Player}?state=0");
                 _timer.Stop();
                 _pageManager.Navigate(typeof(End));
             }));
