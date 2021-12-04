@@ -18,8 +18,13 @@
             <Image VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="1080px" Source="images/bottom_start.png"/>
             <Button Click="Start_Click" Margin="350 1120 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Height="400" Style="{StaticResource TransparentStyle}"></Button>
         </Grid>
-
+        
         <Image x:Name="top" VerticalAlignment="Top" Width="1080px" Height="303px" Source="images/top.png"/>
+        <Button x:Name="HomeButton" Click="Home_Click" Margin="862 14.5 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" Height="108" Style="{StaticResource TransparentStyle}" Visibility="Hidden">
+            <Grid>
+                <Image Source="images/home_button.png" Height="108" Stretch="Fill"/>
+            </Grid>
+        </Button>
         <Image x:Name="lights" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="242px" Height="742px" Source="images/lights.png"/>
     </Grid>
 </Window>

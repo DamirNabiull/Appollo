@@ -117,6 +117,13 @@ namespace Appollo.VkusvillNewYearEvent
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             Start.Visibility = Visibility.Hidden;
+            HomeButton.Visibility = Visibility.Visible;
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            Start.Visibility = Visibility.Visible;
+            HomeButton.Visibility = Visibility.Hidden;
         }
     }
 

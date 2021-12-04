@@ -9,10 +9,10 @@
 
   <ItemGroup>
     <None Remove="images\bottom_start.png" />
+    <None Remove="images\home_button.png" />
     <None Remove="images\lights.png" />
     <None Remove="images\rectangle.png" />
     <None Remove="images\start_button.png" />
-    <None Remove="images\start_top.png" />
     <None Remove="images\top.png" />
   </ItemGroup>
 
@@ -26,10 +26,10 @@
 
   <ItemGroup>
     <Resource Include="images\bottom_start.png" />
+    <Resource Include="images\home_button.png" />
     <Resource Include="images\lights.png" />
     <Resource Include="images\rectangle.png" />
     <Resource Include="images\start_button.png" />
-    <Resource Include="images\start_top.png" />
     <Resource Include="images\top.png" />
   </ItemGroup>
 
