@@ -13,12 +13,60 @@
         <Image x:Name="ImageWebcam" Height="1920" Width="1080" Stretch="Fill"/>
         <Image x:Name="Border" Width="964px" Height="1866px" Source="images/rectangle.png"/>
 
-        <Grid x:Name="Start" Visibility="Visible">
+        <Grid x:Name="Start" Visibility="Hidden">
             <Image Margin="318 1084.65 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="542.11px" Height="464.5px" Source="images/start_button.png"/>
             <Image VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="1080px" Source="images/bottom_start.png"/>
             <Button Click="Start_Click" Margin="350 1120 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Height="400" Style="{StaticResource TransparentStyle}"></Button>
         </Grid>
-        
+
+        <Grid x:Name="Choose" Visibility="Visible">
+            <Button x:Name="ButtonItem1" Click="Item_Click" Margin="106 1213.45 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="285.35" Height="324.44" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/item_background.png" Height="324.44" Width="282.35" Stretch="Fill"/>
+                    <Image x:Name="ImageItem1" Height="234.44" Width="350.63" VerticalAlignment="Top" Margin="-40.24 18.05">
+                        <Image.Clip>
+                            <EllipseGeometry Center="128.5,125.5" RadiusX="128.63" RadiusY="128.63" />
+                        </Image.Clip>
+                    </Image>
+                    <Image Source="images/item_foreground.png" Height="324.44" Width="282.35" Stretch="Fill"/>
+                    <TextBlock x:Name="TextItem1" FontFamily="{StaticResource Euclidi}" TextWrapping="Wrap" Width="265" Height="28" VerticalAlignment="Top" Foreground="#292561" TextAlignment="Center" FontSize="25px" Margin="0 276.55 0 0" FontWeight="Normal"/>
+                    <Image x:Name="Shadow1" Source="images/shadow.png" Height="324.44" Width="282.35" Stretch="Fill" Visibility="Hidden"/>
+                </Grid>
+            </Button>
+
+            <Button x:Name="ButtonItem2" Click="Item_Click" Margin="396.74 1297.14 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="285.35" Height="324.44" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/item_background.png" Height="324.44" Width="282.35" Stretch="Fill"/>
+                    <Image x:Name="ImageItem2" Height="234.44" Width="350.63" VerticalAlignment="Top" Margin="-40.24 18.05">
+                        <Image.Clip>
+                            <EllipseGeometry Center="128.5,125.5" RadiusX="128.63" RadiusY="128.63" />
+                        </Image.Clip>
+                    </Image>
+                    <Image Source="images/item_foreground.png" Height="324.44" Width="282.35" Stretch="Fill"/>
+                    <TextBlock x:Name="TextItem2" FontFamily="{StaticResource Euclidi}" TextWrapping="Wrap" Width="265" Height="28" VerticalAlignment="Top" Foreground="#292561" TextAlignment="Center" FontSize="25px" Margin="0 276.55 0 0" FontWeight="Normal"/>
+                    <Image x:Name="Shadow2" Source="images/shadow.png" Height="324.44" Width="282.35" Stretch="Fill" Visibility="Hidden"/>
+                </Grid>
+            </Button>
+
+            <Button x:Name="ButtonItem3" Click="Item_Click" Margin="691.65 1213.45 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="282.35" Height="324.44" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/item_background.png" Height="324.44" Width="282.35" Stretch="Fill"/>
+                    <Image x:Name="ImageItem3" Height="234.44" Width="350.63" VerticalAlignment="Top" Margin="-40.24 18.05">
+                        <Image.Clip>
+                            <EllipseGeometry Center="128.5,125.5" RadiusX="128.63" RadiusY="128.63"/>
+                        </Image.Clip>
+                    </Image>
+                    <Image Source="images/item_foreground.png" Height="324.44" Width="282.35" Stretch="Fill"/>
+                    <TextBlock x:Name="TextItem3" FontFamily="{StaticResource Euclidi}" TextWrapping="Wrap" Width="265" Height="28" VerticalAlignment="Top" Foreground="#292561" TextAlignment="Center" FontSize="25px" Margin="0 276.55 0 0" FontWeight="Normal"/>
+                    <Image x:Name="Shadow3" Source="images/shadow.png" Height="324.44" Width="282.35" Stretch="Fill" Visibility="Hidden"/>
+                </Grid>
+            </Button>
+
+            <Button x:Name="SendButton" Click="Send_Item_Click" Width="447" Height="103" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="317 1649 0 0" Style="{StaticResource TransparentStyle}">
+                <TextBlock Padding="25" FontFamily="{StaticResource Euclidi}" TextWrapping="Wrap" Width="447" Height="103" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#292561" TextAlignment="Center" FontSize="44px" FontWeight="Normal" Text="ТЕЛЕПОРТИРУЕМ"/>
+            </Button>
+        </Grid>
+
         <Image x:Name="top" VerticalAlignment="Top" Width="1080px" Height="303px" Source="images/top.png"/>
         <Button x:Name="HomeButton" Click="Home_Click" Margin="862 14.5 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" Height="108" Style="{StaticResource TransparentStyle}" Visibility="Hidden">
             <Grid>

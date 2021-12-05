@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Appollo.VkusvillNewYearEvent"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <FontFamily x:Key="Euclidi">pack://application:,,,/fonts/#Euclid Circular B</FontFamily>
         <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
             <Setter Property="Template">
                 <Setter.Value>

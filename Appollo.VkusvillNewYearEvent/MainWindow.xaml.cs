@@ -14,7 +14,6 @@ using System.Windows.Shapes;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
-using System.Drawing;
 using System.Net;
 using System.Diagnostics;
 using System.Threading;
@@ -32,18 +31,34 @@ namespace Appollo.VkusvillNewYearEvent
     {
         private HttpListener _listener;
         private bool _server = true;
-        BitmapImage bi;
         protected static byte[] byteData = new byte[1024];
-        public static string text = "";
-        public static int check = 0;
-        public static int got = 0;
+        public string[] names = new string[3];
+        public int[] indexes = { 1, 2, 3 };
+        public int[] indexes_rand = new int[3];
+        public string my_choise = "-";
+        public string another_choise = "-";
+        public Random rand = new Random();
 
-        private string _mjpeg_url = "http://25.61.239.215:7777/mjpegfeed?1080x1920";
+        private string _mjpeg_url;
         readonly MjpegDecoder _mjpeg;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            Start.Visibility = Visibility.Visible;
+            HomeButton.Visibility = Visibility.Hidden;
+            Choose.Visibility = Visibility.Hidden;
+
+            SendButton.IsEnabled = false;
+
+            using (StreamReader reader = new StreamReader("names.txt"))
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    names[i] = reader.ReadLine();
+                }
+            }
 
             _mjpeg_url = $"http://{Config<AppConfig>.Value.Ip}:{Config<AppConfig>.Value.Port}/mjpegfeed?{Config<AppConfig>.Value.WidthHeight}";
             Trace.WriteLine(_mjpeg_url);
@@ -57,23 +72,6 @@ namespace Appollo.VkusvillNewYearEvent
         private void mjpeg_FrameReady(object sender, FrameReadyEventArgs e)
         {
             ImageWebcam.Source = e.BitmapImage;
-        }
-        
-        BitmapImage BitmapToImageSource(Bitmap bitmap)
-        {
-            Trace.WriteLine("I am here");
-            using (MemoryStream memory = new MemoryStream())
-            {
-                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
-                memory.Position = 0;
-                BitmapImage bitmapimage = new BitmapImage();
-                bitmapimage.BeginInit();
-                bitmapimage.StreamSource = memory;
-                bitmapimage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapimage.EndInit();
-
-                return bitmapimage;
-            }
         }
 
         private void Window_Closing(object sender, CancelEventArgs e)
@@ -116,14 +114,47 @@ namespace Appollo.VkusvillNewYearEvent
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
+            indexes_rand = indexes.OrderBy(x => rand.Next()).ToArray();
+
+            ImageItem1.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/images/Item{indexes_rand[0]}.png"));
+            ImageItem2.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/images/Item{indexes_rand[1]}.png"));
+            ImageItem3.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/images/Item{indexes_rand[2]}.png"));
+
+            TextItem1.Text = names[indexes_rand[0] - 1];
+            TextItem2.Text = names[indexes_rand[1] - 1];
+            TextItem3.Text = names[indexes_rand[2] - 1];
+
             Start.Visibility = Visibility.Hidden;
             HomeButton.Visibility = Visibility.Visible;
+            Choose.Visibility = Visibility.Visible;
+        }
+
+        private void Item_Click(object sender, RoutedEventArgs e)
+        {
+            Button but = sender as Button;
+            my_choise = names[indexes_rand[Int32.Parse(but.Name.Substring(10)) - 1] - 1];
+            SendButton.IsEnabled = true;
+
+            Shadow1.Visibility = Visibility.Visible;
+            Shadow2.Visibility = Visibility.Visible;
+            Shadow3.Visibility = Visibility.Visible;
+
+            ((Image)((Grid)but.Content).Children[4]).Visibility = Visibility.Hidden;
+        }
+
+        private void Send_Item_Click(object sender, RoutedEventArgs e)
+        {
+            Shadow1.Visibility = Visibility.Hidden;
+            Shadow2.Visibility = Visibility.Hidden;
+            Shadow3.Visibility = Visibility.Hidden;
+            Trace.WriteLine(my_choise);
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             Start.Visibility = Visibility.Visible;
             HomeButton.Visibility = Visibility.Hidden;
+            Choose.Visibility = Visibility.Hidden;
         }
     }
 

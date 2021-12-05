@@ -141,7 +141,7 @@ namespace Appolo.RifleChambers.QuizGame {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Appolo.RifleChambers.QuizGame;component/question6.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Appolo.RifleChambers.QuizGame;V1.0.0.0;component/question6.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Question6.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

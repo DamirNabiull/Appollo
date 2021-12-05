@@ -24,6 +24,6 @@ C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Debug\net6.0-win
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Debug\net6.0-windows\ref\Appollo.VkusvillNewYearEvent.dll
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Debug\net6.0-windows\Appollo.VkusvillNewYearEvent.pdb
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Debug\net6.0-windows\Appollo.VkusvillNewYearEvent.genruntimeconfig.cache
-C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Debug\net6.0-windows\Appollo.VkusvillNewYearEvent.csproj.AssemblyReference.cache
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\bin\Debug\net6.0-windows\MjpegProcessor.dll
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Debug\net6.0-windows\App.baml
+C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Debug\net6.0-windows\Appollo.VkusvillNewYearEvent.csproj.AssemblyReference.cache
