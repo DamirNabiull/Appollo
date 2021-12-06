@@ -10,6 +10,8 @@
   <ItemGroup>
     <None Remove="fonts\EuclidCircularB-Bold.ttf" />
     <None Remove="images\bottom_start.png" />
+    <None Remove="images\get_photo_button.png" />
+    <None Remove="images\get_prize_button.png" />
     <None Remove="images\home_button.png" />
     <None Remove="images\Item1.png" />
     <None Remove="images\item_background.png" />
@@ -19,6 +21,7 @@
     <None Remove="images\shadow.png" />
     <None Remove="images\start_button.png" />
     <None Remove="images\top.png" />
+    <None Remove="images\wait.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +35,8 @@
   <ItemGroup>
     <Resource Include="fonts\EuclidCircularB-Bold.ttf" />
     <Resource Include="images\bottom_start.png" />
+    <Resource Include="images\get_photo_button.png" />
+    <Resource Include="images\get_prize_button.png" />
     <Resource Include="images\home_button.png" />
     <Resource Include="images\Item1.png" />
     <Resource Include="images\item_background.png" />
@@ -41,6 +46,7 @@
     <Resource Include="images\shadow.png" />
     <Resource Include="images\start_button.png" />
     <Resource Include="images\top.png" />
+    <Resource Include="images\wait.png" />
   </ItemGroup>
 
 </Project>
