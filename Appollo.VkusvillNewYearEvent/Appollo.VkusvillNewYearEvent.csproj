@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="fonts\EuclidCircularB-Bold.ttf" />
+    <None Remove="images\back_shadow.png" />
     <None Remove="images\bottom_start.png" />
     <None Remove="images\get_photo_button.png" />
     <None Remove="images\get_prize_button.png" />
@@ -17,11 +18,14 @@
     <None Remove="images\item_background.png" />
     <None Remove="images\item_foreground.png" />
     <None Remove="images\lights.png" />
+    <None Remove="images\morkov.gif" />
+    <None Remove="images\no_button.png" />
     <None Remove="images\rectangle.png" />
     <None Remove="images\shadow.png" />
     <None Remove="images\start_button.png" />
     <None Remove="images\top.png" />
     <None Remove="images\wait.png" />
+    <None Remove="images\yes_button.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,10 +34,12 @@
     <PackageReference Include="Emgu.CV.UI" Version="4.5.4.4788" />
     <PackageReference Include="MJPEG-Decoder" Version="1.2.0" />
     <PackageReference Include="Simple-HTTP" Version="1.0.6" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="fonts\EuclidCircularB-Bold.ttf" />
+    <Resource Include="images\back_shadow.png" />
     <Resource Include="images\bottom_start.png" />
     <Resource Include="images\get_photo_button.png" />
     <Resource Include="images\get_prize_button.png" />
@@ -42,11 +48,14 @@
     <Resource Include="images\item_background.png" />
     <Resource Include="images\item_foreground.png" />
     <Resource Include="images\lights.png" />
+    <Resource Include="images\morkov.gif" />
+    <Resource Include="images\no_button.png" />
     <Resource Include="images\rectangle.png" />
     <Resource Include="images\shadow.png" />
     <Resource Include="images\start_button.png" />
     <Resource Include="images\top.png" />
     <Resource Include="images\wait.png" />
+    <Resource Include="images\yes_button.png" />
   </ItemGroup>
 
 </Project>

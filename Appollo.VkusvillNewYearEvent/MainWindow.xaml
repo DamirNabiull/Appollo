@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Appollo.VkusvillNewYearEvent"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         Closing="Window_Closing"
         WindowState="Maximized"
         WindowStyle="None"
@@ -71,12 +72,14 @@
         </Grid>
 
         <Grid x:Name="SuccessGrid" Visibility="Hidden">
+            <Image Height="1920" Width="1080" Source="images/back_shadow.png"/>
             <TextBlock FontFamily="{StaticResource Euclidi}" TextWrapping="Wrap" Width="600" Height="405" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FFFFFF" TextAlignment="Center" FontSize="64px" FontWeight="Normal" Margin="0 880 0 0" Text="ВКУС СОВПАЛ! УСПЕШНАЯ ТЕЛЕПОРТАЦИЯ"/>
             <Image Margin="330 1156 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="420.26" Height="408.69" Source="images/get_prize_button.png"/>
             <Button Click="Home_Click" Margin="340 1180 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380" Height="380" Style="{StaticResource TransparentStyle}"></Button>
         </Grid>
 
-        <Grid x:Name="FailGrid" Visibility="Visible">
+        <Grid x:Name="FailGrid" Visibility="Hidden">
+            <Image Height="1920" Width="1080" Source="images/back_shadow.png"/>
             <TextBlock FontFamily="{StaticResource Euclidi}" TextWrapping="Wrap" Width="600" Height="300" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FFFFFF" TextAlignment="Center" FontSize="64px" FontWeight="Normal" Margin="0 762 0 0" Text="ВКУСЫ РАЗНЫЕ, НО НАСТРОЕНИЕ ПРАЗДНИЧНОЕ"/>
             <Button Margin="188 1045 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="285.35" Height="324.44" Style="{StaticResource TransparentStyle}" IsEnabled="False">
                 <Grid>
@@ -108,8 +111,19 @@
             <Button Click="Home_Click" Margin="340 1413 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380" Height="380" Style="{StaticResource TransparentStyle}"></Button>
         </Grid>
 
+        <Grid x:Name="MenuGrid" Visibility="Hidden">
+            <Image Height="1920" Width="1080" Source="images/back_shadow.png"/>
+            <TextBlock FontFamily="{StaticResource Euclidi}" TextWrapping="Wrap" Width="700" Height="100" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FFFFFF" TextAlignment="Center" FontSize="64px" FontWeight="Normal" Margin="0 724 0 0" Text="ЗАВЕРШИТЬ ИГРУ?"/>
+
+            <Image Margin="105 1002 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="420.26" Height="408.69" Source="images/yes_button.png"/>
+            <Button Click="Home_Click" Margin="120 1030 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380" Height="380" Style="{StaticResource TransparentStyle}"></Button>
+            
+            <Image Margin="555 1002 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="420.26" Height="408.69" Source="images/no_button.png"/>
+            <Button Click="Cancel_Click" Margin="570 1030 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380" Height="380" Style="{StaticResource TransparentStyle}"></Button>
+        </Grid>
+
         <Image x:Name="top" VerticalAlignment="Top" Width="1080px" Height="303px" Source="images/top.png"/>
-        <Button x:Name="HomeButton" Click="Home_Click" Margin="862 14.5 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" Height="108" Style="{StaticResource TransparentStyle}" Visibility="Hidden">
+        <Button x:Name="HomeButton" Click="Home_Grid_Click" Margin="862 14.5 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" Height="108" Style="{StaticResource TransparentStyle}" Visibility="Hidden">
             <Grid>
                 <Image Source="images/home_button.png" Height="108" Stretch="Fill"/>
             </Grid>

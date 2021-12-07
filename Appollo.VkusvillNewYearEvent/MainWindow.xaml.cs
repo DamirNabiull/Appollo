@@ -25,6 +25,7 @@ using System.Threading.Tasks;
 using System.Windows.Threading;
 using MjpegProcessor;
 using System.Net.Http;
+using WpfAnimatedGif;
 
 namespace Appollo.VkusvillNewYearEvent
 {
@@ -38,8 +39,11 @@ namespace Appollo.VkusvillNewYearEvent
         public int[] indexes_rand = new int[3];
         public int my_choise = 0;
         public int another_choise = 0;
+        public int state = 0;
         public bool received = false;
+        public bool sended = false;
         public Random rand = new Random();
+        bool in_menu = false;
         private HttpClient _client = new HttpClient();
 
         private string _mjpeg_url;
@@ -54,6 +58,7 @@ namespace Appollo.VkusvillNewYearEvent
             Choose.Visibility = Visibility.Hidden;
             SuccessGrid.Visibility = Visibility.Hidden;
             FailGrid.Visibility = Visibility.Hidden;
+            MenuGrid.Visibility = Visibility.Hidden;
 
             SendButton.IsEnabled = false;
 
@@ -112,16 +117,16 @@ namespace Appollo.VkusvillNewYearEvent
             var context = o as HttpListenerContext;
             var vars = context.Request.Url.ParseQueryString();
             another_choise = Int32.Parse(vars["item"]);
-            if (my_choise != 0)
+            if (sended && another_choise != 0)
             {
-                if (another_choise == my_choise)
+                if (another_choise == my_choise && !in_menu)
                 {
                     this.Dispatcher.Invoke(new Action(() =>
                     {
                         Success();
                     }));
                 }
-                else
+                else if (!in_menu)
                 {
                     this.Dispatcher.Invoke(new Action(() =>
                     {
@@ -135,6 +140,7 @@ namespace Appollo.VkusvillNewYearEvent
 
         private void Success()
         {
+            state = 3;
             ImageWait.Visibility = Visibility.Hidden;
             Choose.Visibility = Visibility.Hidden;
             Border.Visibility = Visibility.Hidden;
@@ -142,23 +148,27 @@ namespace Appollo.VkusvillNewYearEvent
             SuccessGrid.Visibility = Visibility.Visible;
             another_choise = 0;
             my_choise = 0;
+            sended = false;
         }
 
         private void Fail()
         {
+            state = 4;
             ImageWait.Visibility = Visibility.Hidden;
             Choose.Visibility = Visibility.Hidden;
             FailGrid.Visibility = Visibility.Visible;
-            TextFinalItem1.Text = names[my_choise-1];
-            TextFinalItem2.Text = names[another_choise-1];
+            TextFinalItem1.Text = names[my_choise - 1];
+            TextFinalItem2.Text = names[another_choise - 1];
             ImageFinalItem1.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/images/Item{my_choise}.png"));
             ImageFinalItem2.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/images/Item{another_choise}.png"));
             another_choise = 0;
             my_choise = 0;
+            sended = false;
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
+            state = 1;
             indexes_rand = indexes.OrderBy(x => rand.Next()).ToArray();
 
             ImageItem1.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/images/Item{indexes_rand[0]}.png"));
@@ -189,6 +199,7 @@ namespace Appollo.VkusvillNewYearEvent
 
         private void Send_Item_Click(object sender, RoutedEventArgs e)
         {
+            sended = true;
             _client.GetAsync($"http://{Config<AppConfig>.Value.Ip}:3001/play/?item={my_choise}");
             ButtonItem1.IsEnabled = false;
             ButtonItem2.IsEnabled = false;
@@ -198,6 +209,7 @@ namespace Appollo.VkusvillNewYearEvent
             if (another_choise == 0)
             {
                 ImageWait.Visibility = Visibility.Visible;
+                state = 2;
             }
             else if (another_choise == my_choise)
             {
@@ -209,14 +221,30 @@ namespace Appollo.VkusvillNewYearEvent
             }
         }
 
+        private void Home_Grid_Click(object sender, RoutedEventArgs e)
+        {
+            in_menu = true;
+            MenuGrid.Visibility = Visibility.Visible;
+            ImageWait.Visibility = Visibility.Hidden;
+            SuccessGrid.Visibility = Visibility.Hidden;
+            FailGrid.Visibility = Visibility.Hidden;
+            Choose.Visibility = Visibility.Hidden;
+            Border.Visibility = Visibility.Visible;
+            Lights.Visibility = Visibility.Visible;
+            HomeButton.Visibility = Visibility.Hidden;
+        }
+
         private void Home_Click(object sender, RoutedEventArgs e)
         {
+            in_menu = false;
+            state = 0;
             my_choise = 0;
+
             _client.GetAsync($"http://{Config<AppConfig>.Value.Ip}:3001/play/?item={my_choise}");
             received = false;
             Start.Visibility = Visibility.Visible;
             HomeButton.Visibility = Visibility.Hidden;
-            Choose.Visibility = Visibility.Hidden;
+
             ButtonItem1.IsEnabled = true;
             ButtonItem2.IsEnabled = true;
             ButtonItem3.IsEnabled = true;
@@ -225,11 +253,52 @@ namespace Appollo.VkusvillNewYearEvent
             Shadow1.Visibility = Visibility.Hidden;
             Shadow2.Visibility = Visibility.Hidden;
             Shadow3.Visibility = Visibility.Hidden;
+
             ImageWait.Visibility = Visibility.Hidden;
             SuccessGrid.Visibility = Visibility.Hidden;
             FailGrid.Visibility = Visibility.Hidden;
+            Choose.Visibility = Visibility.Hidden;
+            MenuGrid.Visibility = Visibility.Hidden;
+
             Border.Visibility = Visibility.Visible;
             Lights.Visibility = Visibility.Visible;
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            in_menu = false;
+            HomeButton.Visibility = Visibility.Visible;
+            MenuGrid.Visibility = Visibility.Hidden;
+            if (state == 1) {
+                Choose.Visibility = Visibility.Visible;
+            }
+            if (state == 2)
+            {
+                Choose.Visibility = Visibility.Visible;
+                if (another_choise == 0)
+                {
+                    ImageWait.Visibility = Visibility.Visible;
+                    state = 2;
+                }
+                else if (another_choise == my_choise)
+                {
+                    Success();
+                }
+                else
+                {
+                    Fail();
+                }
+            }
+            if (state == 3)
+            {
+                Border.Visibility = Visibility.Hidden;
+                Lights.Visibility = Visibility.Hidden;
+                SuccessGrid.Visibility = Visibility.Visible;
+            }
+            if (state == 4)
+            {
+                FailGrid.Visibility = Visibility.Visible;
+            }
         }
     }
 

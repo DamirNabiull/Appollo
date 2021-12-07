@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "F9qPsoIuF3SgyxjYNZQTQk6BcBL1VWjWoJJ3DJ534VjJxY8qZpnFqRJJRUmBubTMzqrjO4VIt6eAQHiJ2spsaQ==",
+  "dgSpecHash": "hvcUEJy7uXuyV2Y6/P+6Q1QwllodVBm99ZdnjAyH1ZmaygbzqEsX8U3cpMyy66Yqog8KSeGVyHg88nXsNjVq5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.VkusvillNewYearEvent\\Appollo.VkusvillNewYearEvent.csproj",
   "expectedPackageFiles": [
@@ -96,7 +96,8 @@
     "C:\\Users\\Dale\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Dale\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Dale\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Dale\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Dale\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Dale\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
   ],
   "logs": [
     {
