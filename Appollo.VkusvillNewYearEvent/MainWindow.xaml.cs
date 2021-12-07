@@ -39,10 +39,15 @@ namespace Appollo.VkusvillNewYearEvent
         public int[] indexes_rand = new int[3];
         public int my_choise = 0;
         public int another_choise = 0;
+        public int copy_choise = 0;
         public int state = 0;
         public bool received = false;
         public bool sended = false;
+        public bool in_success = false;
         public Random rand = new Random();
+        public int animation_index = 0;
+        public string[] animation_names = { "Морква_00", "Круасан_00", "Чипос_00"};
+        public DispatcherTimer timer;
         bool in_menu = false;
         private HttpClient _client = new HttpClient();
 
@@ -76,12 +81,25 @@ namespace Appollo.VkusvillNewYearEvent
             _mjpeg.FrameReady += mjpeg_FrameReady;
             _mjpeg.ParseStream(new Uri(_mjpeg_url));
 
+            timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(15) };
+            timer.Tick += UpdateStream;
+
+            new Thread(Animate).Start();
             new Thread(RunServer).Start();
         }
 
         private void mjpeg_FrameReady(object sender, FrameReadyEventArgs e)
         {
             ImageWebcam.Source = e.BitmapImage;
+        }
+
+        private void UpdateStream(object sender, EventArgs e)
+        {
+            timer.Stop();
+            _mjpeg.StopStream();
+            _mjpeg.ParseStream(new Uri(_mjpeg_url));
+            timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(15) };
+            timer.Start();
         }
 
         private void Window_Closing(object sender, CancelEventArgs e)
@@ -138,14 +156,50 @@ namespace Appollo.VkusvillNewYearEvent
             context.Response.Close();
         }
 
+        private void Animate()
+        {
+            while (true)
+            {
+                if (in_success)
+                {
+                    if (animation_index < 10)
+                    {
+                        this.Dispatcher.Invoke(new Action(() =>
+                        {
+                            ImageAnimation.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/animations/item{copy_choise}/{animation_names[copy_choise - 1]}00{animation_index}.png"));
+                        }));
+                    }
+                    else if (animation_index < 100)
+                    {
+                        this.Dispatcher.Invoke(new Action(() =>
+                        {
+                            ImageAnimation.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/animations/item{copy_choise}/{animation_names[copy_choise - 1]}0{animation_index}.png"));
+                        }));
+                    }
+                    else
+                    {
+                        this.Dispatcher.Invoke(new Action(() =>
+                        {
+                            ImageAnimation.Source = new BitmapImage(new Uri($@"{PathHelpers.ExecutableDirectory()}/animations/item{copy_choise}/{animation_names[copy_choise - 1]}{animation_index}.png"));
+                        }));
+                    }
+                    animation_index = (animation_index + 1) % 250;
+                    Task.WaitAll(new Task[] {Task.Delay(40)});
+                }
+            }
+        }
+
         private void Success()
         {
+            animation_index = 0;
+            in_success = true;
             state = 3;
             ImageWait.Visibility = Visibility.Hidden;
             Choose.Visibility = Visibility.Hidden;
             Border.Visibility = Visibility.Hidden;
             Lights.Visibility = Visibility.Hidden;
             SuccessGrid.Visibility = Visibility.Visible;
+            copy_choise = my_choise;
             another_choise = 0;
             my_choise = 0;
             sended = false;
@@ -236,6 +290,7 @@ namespace Appollo.VkusvillNewYearEvent
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
+            in_success = false;
             in_menu = false;
             state = 0;
             my_choise = 0;

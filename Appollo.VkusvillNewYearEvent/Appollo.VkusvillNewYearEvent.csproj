@@ -10,6 +10,8 @@
   <ItemGroup>
     <None Remove="fonts\EuclidCircularB-Bold.ttf" />
     <None Remove="images\back_shadow.png" />
+    <None Remove="images\bag_back.png" />
+    <None Remove="images\bag_front.png" />
     <None Remove="images\bottom_start.png" />
     <None Remove="images\get_photo_button.png" />
     <None Remove="images\get_prize_button.png" />
@@ -40,6 +42,8 @@
   <ItemGroup>
     <Resource Include="fonts\EuclidCircularB-Bold.ttf" />
     <Resource Include="images\back_shadow.png" />
+    <Resource Include="images\bag_back.png" />
+    <Resource Include="images\bag_front.png" />
     <Resource Include="images\bottom_start.png" />
     <Resource Include="images\get_photo_button.png" />
     <Resource Include="images\get_prize_button.png" />

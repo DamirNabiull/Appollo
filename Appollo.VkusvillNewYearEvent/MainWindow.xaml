@@ -73,6 +73,12 @@
 
         <Grid x:Name="SuccessGrid" Visibility="Hidden">
             <Image Height="1920" Width="1080" Source="images/back_shadow.png"/>
+
+            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Margin="139 1634 0 0" Width="784.91" Height="391.06" Source="images/bag_back.png"/>
+            <Image x:Name="ImageAnimation" Width="1080" Height="1920" Stretch="Fill"/>
+            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140.3 1634 0 0" Width="748.4" Height="391.06" Source="images/bag_front.png"/>
+
+
             <TextBlock FontFamily="{StaticResource Euclidi}" TextWrapping="Wrap" Width="600" Height="405" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FFFFFF" TextAlignment="Center" FontSize="64px" FontWeight="Normal" Margin="0 880 0 0" Text="ВКУС СОВПАЛ! УСПЕШНАЯ ТЕЛЕПОРТАЦИЯ"/>
             <Image Margin="330 1156 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="420.26" Height="408.69" Source="images/get_prize_button.png"/>
             <Button Click="Home_Click" Margin="340 1180 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380" Height="380" Style="{StaticResource TransparentStyle}"></Button>
