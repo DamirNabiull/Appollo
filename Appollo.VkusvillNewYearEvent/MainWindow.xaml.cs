@@ -83,6 +83,7 @@ namespace Appollo.VkusvillNewYearEvent
 
             timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(15) };
             timer.Tick += UpdateStream;
+            timer.Start();
 
             new Thread(Animate).Start();
             new Thread(RunServer).Start();
@@ -95,11 +96,16 @@ namespace Appollo.VkusvillNewYearEvent
 
         private void UpdateStream(object sender, EventArgs e)
         {
-            timer.Stop();
-            _mjpeg.StopStream();
-            _mjpeg.ParseStream(new Uri(_mjpeg_url));
-            timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(15) };
-            timer.Start();
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                Trace.WriteLine("Update Stream");
+                timer.Stop();
+                _mjpeg.StopStream();
+                _mjpeg.ParseStream(new Uri(_mjpeg_url));
+                timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(15) };
+                timer.Tick += UpdateStream;
+                timer.Start();
+            }));
         }
 
         private void Window_Closing(object sender, CancelEventArgs e)

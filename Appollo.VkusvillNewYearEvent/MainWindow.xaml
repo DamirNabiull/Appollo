@@ -15,10 +15,10 @@
         <Image x:Name="ImageWait" Width="925" Height="156" Margin="0 1692 0 0" Source="images/wait.png" VerticalAlignment="Top" Visibility="Hidden"/>
         <Image x:Name="Border" Width="964px" Height="1810px" Source="images/rectangle.png" Stretch="Fill"/>
 
-        <Grid x:Name="Start" Visibility="Hidden">
-            <Image Margin="318 1084.65 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="542.11px" Height="464.5px" Source="images/start_button.png"/>
+        <Grid x:Name="Start" Visibility="Visible">
+            <Image Margin="368 1284.65 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="442.11px" Height="364.5px" Source="images/start_button.png"/>
             <Image VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="1080px" Source="images/bottom_start.png"/>
-            <Button Click="Start_Click" Margin="350 1120 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Height="400" Style="{StaticResource TransparentStyle}"></Button>
+            <Button Click="Start_Click" Margin="400 1320 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Height="300" Style="{StaticResource TransparentStyle}"></Button>
         </Grid>
 
         <Image x:Name="Lights" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="242px" Height="742px" Source="images/lights.png"/>

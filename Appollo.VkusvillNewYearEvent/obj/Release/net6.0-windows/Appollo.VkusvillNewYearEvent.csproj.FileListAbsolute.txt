@@ -26,5 +26,6 @@ C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Release\net6.0-w
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Release\net6.0-windows\ref\Appollo.VkusvillNewYearEvent.dll
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Release\net6.0-windows\Appollo.VkusvillNewYearEvent.pdb
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Release\net6.0-windows\Appollo.VkusvillNewYearEvent.genruntimeconfig.cache
-C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Release\net6.0-windows\Appollo.VkusvillNewYearEvent.csproj.AssemblyReference.cache
 C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\bin\Release\net6.0-windows\WpfAnimatedGif.dll
+C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Release\net6.0-windows\Appollo.VkusvillNewYearEvent.csproj.CopyComplete
+C:\Users\Dale\Documents\Appolo\Appollo.VkusvillNewYearEvent\obj\Release\net6.0-windows\Appollo.VkusvillNewYearEvent.csproj.AssemblyReference.cache
