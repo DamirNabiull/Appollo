@@ -1,0 +1,13 @@
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\bin\x64\Release\Appollo.MercedesEQS.exe.config
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\bin\x64\Release\Appollo.MercedesEQS.exe
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\bin\x64\Release\Appollo.MercedesEQS.pdb
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\bin\x64\Release\Vlc.DotNet.Core.dll
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\bin\x64\Release\Vlc.DotNet.Core.Interops.dll
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\bin\x64\Release\Vlc.DotNet.Forms.dll
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\obj\x64\Release\Appollo.MercedesEQS.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\obj\x64\Release\Appollo.MercedesEQS.Properties.Resources.resources
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\obj\x64\Release\Appollo.MercedesEQS.csproj.GenerateResource.cache
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\obj\x64\Release\Appollo.MercedesEQS.csproj.CoreCompileInputs.cache
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\obj\x64\Release\Appollo.MercedesEQS.exe
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\obj\x64\Release\Appollo.MercedesEQS.pdb
+C:\Users\Dale\Documents\Appolo\Appollo.MercedesEQS\obj\x64\Release\Appollo.MercedesEQS.Form1.resources
