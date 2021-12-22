@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cc8312f0-b625-4383-9415-8af5e145c39e": {
+      "ProjectGuid": "cc8312f0-b625-4383-9415-8af5e145c39e",
+      "DisplayName": "Appollo.RifleChambers.Guns_Menu",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

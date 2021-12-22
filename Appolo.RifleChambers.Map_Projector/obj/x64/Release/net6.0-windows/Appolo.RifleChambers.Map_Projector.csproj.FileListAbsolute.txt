@@ -20,3 +20,4 @@ C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Map_Projector\obj\x64\Releas
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Map_Projector\obj\x64\Release\net6.0-windows\ref\Appolo.RifleChambers.Map_Projector.dll
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Map_Projector\obj\x64\Release\net6.0-windows\Appolo.RifleChambers.Map_Projector.pdb
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Map_Projector\obj\x64\Release\net6.0-windows\Appolo.RifleChambers.Map_Projector.genruntimeconfig.cache
+C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Map_Projector\obj\x64\Release\net6.0-windows\Appolo.RifleChambers.Map_Projector.csproj.AssemblyReference.cache

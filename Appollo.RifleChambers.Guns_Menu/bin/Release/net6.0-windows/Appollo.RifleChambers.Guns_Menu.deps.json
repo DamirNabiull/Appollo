@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Appollo.RifleChambers.Guns_Menu/1.0.0": {
+        "runtime": {
+          "Appollo.RifleChambers.Guns_Menu.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Appollo.RifleChambers.Guns_Menu/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

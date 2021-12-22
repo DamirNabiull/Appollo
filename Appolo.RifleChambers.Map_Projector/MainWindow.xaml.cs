@@ -128,7 +128,7 @@ namespace Appolo.RifleChambers.Map_Projector
                         BeginTime = TimeSpan.FromSeconds(0),
                         Duration = TimeSpan.FromSeconds(1),
                     };
-
+                     
                     animation.Completed += (s, a) => New_Photo.Opacity = 0.0;
                     New_Photo.BeginAnimation(UIElement.OpacityProperty, animation);
                 }

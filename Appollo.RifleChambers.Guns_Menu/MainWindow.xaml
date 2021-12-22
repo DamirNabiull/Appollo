@@ -1,0 +1,400 @@
+﻿<Window x:Class="Appollo.RifleChambers.Guns_Menu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Appollo.RifleChambers.Guns_Menu"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Closing="Window_Closing"
+        Title="MainWindow" Height="768" Width="1024">
+    <Grid>
+        <Grid x:Name="Choose_Label" Width="1024" Height="768" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/Background_Choose.png"/>
+            </Grid.Background>
+
+            <Button Click="Start_3" Margin="716.57 532.14 0 0" Width="186.48" Height="92.01" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/button.png"  Height="92.01" Stretch="Fill"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="186.48px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                            <Run>САМОПАЛ</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+
+            <Button Click="Start_2" Margin="418.69 532.14 0 0" Width="186.48" Height="92.01" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/button.png"  Height="92.01" Stretch="Fill"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="186.48px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                            <Run>ПИЩАЛЬ</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+
+            <Button Click="Start_1" Margin="120.46 532.14 0 0" Width="186.48" Height="92.01" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/button.png"  Height="92.01" Stretch="Fill"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="186.48px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                            <Run>мушкет</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+
+            <Button Click="Exit_Button" Margin="932 14 0 0" Width="66" Height="81.719" Style="{StaticResource TransparentStyle}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Image Source="images/Close_Button.png" Width="66" Height="81.719" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="Start_Label" Width="1024" Height="768" Visibility="Visible">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/Background_Start.png"/>
+            </Grid.Background>
+
+            <Button Click="Start_Button" Margin="701 421 0 0" Width="206" Height="119.11" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/button.png" Width="206" Height="119.11" Stretch="Fill"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="186.48px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="25px" FontWeight="Bold">
+                            <Run>НАЧАТЬ</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="Window_1" Width="1024" Height="768" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/Mushket.png"/>
+            </Grid.Background>
+
+            <Button Click="Exit_Button" Margin="932 14 0 0" Width="66" Height="81.719" Style="{StaticResource TransparentStyle}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Image Source="images/Close_Button.png" Width="66" Height="81.719" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="Window_2" Width="1024" Height="768" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/Pishal.png"/>
+            </Grid.Background>
+
+            <Button Click="Exit_Button" Margin="932 14 0 0" Width="66" Height="81.719" Style="{StaticResource TransparentStyle}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Image Source="images/Close_Button.png" Width="66" Height="81.719" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="Window_3" Width="1024" Height="768" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/Samopal.png"/>
+            </Grid.Background>
+
+            <Button Click="Exit_Button" Margin="932 14 0 0" Width="66" Height="81.719" Style="{StaticResource TransparentStyle}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Image Source="images/Close_Button.png" Width="66" Height="81.719" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="Email" Width="1024" Height="768" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/Background_Email.png"/>
+            </Grid.Background>
+
+            <TextBox x:Name="Email_Field" Margin="0 240 0 0" Height="55" Width="627" FontFamily="Inter" Foreground="#332721" Background="#E7D7BE" BorderThickness="3px" BorderBrush="#FFFFFF" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="25px" FontWeight="Bold" Focusable="False"></TextBox>
+            <Grid Margin="0 430 0 0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="215" Width="850">
+                <Grid Height="50" VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="0" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="1" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="2" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="2" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="4" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="3" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="6" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="4" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="8" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="5" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="10" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="6" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="12" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="7" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="14" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="8" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="16" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="9" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="18" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="0" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+                    </Button>
+                </Grid>
+
+                <Grid Height="50"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 55 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="0" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="q" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="2" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="w" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="4" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="e" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="6" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="r" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="8" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="t" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="10" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="y" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="12" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="u" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="14" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="i" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="16" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="o" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="18" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="p" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="20" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="-" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+                </Grid>
+
+                <Grid Height="50"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 110 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="0" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="a" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="2" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="s" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="4" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="d" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="6" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="f" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="8" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="g" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="10" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="h" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="12" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="j" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="14" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="k" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="16" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="l" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="18" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="_" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Shift_Clcik" Grid.Column="20" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <Image Source="images/shift.png" Height="25.98" Width="23.07" Stretch="Fill" Margin="0 0 0 0"/>
+                    </Button>
+                </Grid>
+
+                <Grid Height="50"  VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="66.02"/>
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="139"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="0" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="z" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="2" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="x" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="4" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="c" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="6" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="v" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="8" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="b" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="10" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="n" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="12" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="m" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="14" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="@" Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Clcik" Grid.Column="16" Width="66.02" Style="{StaticResource KeyboardStyle}">
+                        <TextBlock Text="." Foreground="#FFFFFF" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40"/>
+                    </Button>
+
+                    <Button Click="Keyboard_Backspace_Clcik" Grid.Column="18" Width="160" Style="{StaticResource KeyboardStyle}">
+                        <Image Source="images/backspace.png" Height="27.16" Width="36.61" Stretch="Fill" Margin="-10 0 0 0"/>
+                    </Button>
+                </Grid>
+            </Grid>
+
+            <Button Click="SendMessage" Margin="0 308 0 0" Width="186.48" Height="92.01" VerticalAlignment="Top" HorizontalAlignment="Center" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/button.png"  Height="92.01" Stretch="Fill"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="186.48px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="30px" FontWeight="Bold">
+                            <Run>далее</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+
+            <Button Click="Close_Button" Margin="932 14 0 0" Width="66" Height="81.719" Style="{StaticResource TransparentStyle}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Image Source="images/Close_Button.png" Width="66" Height="81.719" Stretch="Fill" VerticalAlignment="Top"/>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="End" Width="1024" Height="768" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/Background_End.png"/>
+            </Grid.Background>
+
+            <Button Click="Close_Button" Margin="669.46 468 0 0" Width="186.48" Height="92.01" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource TransparentStyle}">
+                <Grid>
+                    <Image Source="images/button.png"  Height="92.01" Stretch="Fill"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Width="186.48px" Foreground="#FFFFFF" FontFamily="{StaticResource Kremlin}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="25px" FontWeight="Bold">
+                            <Run>вернуться</Run>
+                    </TextBlock>
+                </Grid>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

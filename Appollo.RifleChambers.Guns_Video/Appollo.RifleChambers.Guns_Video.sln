@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31710.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appollo.RifleChambers.Guns_Video", "Appollo.RifleChambers.Guns_Video.csproj", "{A348F4B0-944D-4D93-906D-BCDB70CFBEE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A348F4B0-944D-4D93-906D-BCDB70CFBEE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A348F4B0-944D-4D93-906D-BCDB70CFBEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A348F4B0-944D-4D93-906D-BCDB70CFBEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A348F4B0-944D-4D93-906D-BCDB70CFBEE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FF8FCCA-2662-495B-B42B-11F0D0569E20}
+	EndGlobalSection
+EndGlobal

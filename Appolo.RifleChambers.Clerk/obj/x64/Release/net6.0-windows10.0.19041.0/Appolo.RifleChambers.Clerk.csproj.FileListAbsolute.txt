@@ -104,5 +104,4 @@ C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\x64\Release\net6.0
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\x64\Release\net6.0-windows10.0.19041.0\Appolo.RifleChambers.Clerk.genruntimeconfig.cache
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\x64\Release\net6.0-windows10.0.19041.0\Wait3.g.cs
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\x64\Release\net6.0-windows10.0.19041.0\Wait3.baml
-C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\x64\Release\net6.0-windows10.0.19041.0\Appolo.RifleChambers.Clerk.csproj.CopyComplete
 C:\Users\Dale\Documents\Appolo\Appolo.RifleChambers.Clerk\obj\x64\Release\net6.0-windows10.0.19041.0\Appolo.RifleChambers.Clerk.csproj.AssemblyReference.cache

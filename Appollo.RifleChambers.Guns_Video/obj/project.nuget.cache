@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "6N5PNSgVp72+Grm9UI0MnCztRAvqXoStNuzRB+WtDvD/SPiHfk5ACDKk5u2ZtzkmaB1+/IrxGhtv2BqGi3E7Pw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.RifleChambers.Guns_Video\\Appollo.RifleChambers.Guns_Video.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dale\\.nuget\\packages\\mjpeg-decoder\\1.2.0\\mjpeg-decoder.1.2.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"MJPEG-Decoder 1.2.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "MJPEG-Decoder",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

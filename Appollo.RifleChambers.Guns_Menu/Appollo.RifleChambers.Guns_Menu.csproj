@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+	  <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fonts\KREMLIN ALEXANDER.OTF" />
+    <None Remove="fonts\Kremlin Alexander.ttf" />
+    <None Remove="fonts\MUROMETZ.TTF" />
+    <None Remove="images\Background_Choose.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="fonts\KREMLIN ALEXANDER.OTF" />
+    <Resource Include="fonts\Kremlin Alexander.ttf" />
+    <Resource Include="fonts\MUROMETZ.TTF" />
+    <Resource Include="images\Background_Choose.png" />
+    <Resource Include="images\Background_Email.png" />
+    <Resource Include="images\Background_End.png" />
+    <Resource Include="images\Background_Start.png" />
+    <Resource Include="images\backspace.png" />
+    <Resource Include="images\button.png" />
+    <Resource Include="images\Close_Button.png" />
+    <Resource Include="images\Mushket.png" />
+    <Resource Include="images\Pishal.png" />
+    <Resource Include="images\Samopal.png" />
+    <Resource Include="images\shift.png" />
+  </ItemGroup>
+
+</Project>
