@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fonts\KREMLIN ALEXANDER.OTF" />
+    <None Remove="fonts\Kremlin Alexander.ttf" />
+    <None Remove="fonts\MUROMETZ.TTF" />
+    <None Remove="images\ataka.png" />
+    <None Remove="images\ataka_back.png" />
+    <None Remove="images\Background_Choose.png" />
+    <None Remove="images\Background_Email.png" />
+    <None Remove="images\Background_End.png" />
+    <None Remove="images\Background_Start.png" />
+    <None Remove="images\backspace.png" />
+    <None Remove="images\button.png" />
+    <None Remove="images\Close_Button.png" />
+    <None Remove="images\Mushket.png" />
+    <None Remove="images\otstuplenie.png" />
+    <None Remove="images\otstuplenie_back.png" />
+    <None Remove="images\Pishal.png" />
+    <None Remove="images\pohod.png" />
+    <None Remove="images\pohod_back.png" />
+    <None Remove="images\postroenie.png" />
+    <None Remove="images\postroenie_back.png" />
+    <None Remove="images\Samopal.png" />
+    <None Remove="images\sbor.png" />
+    <None Remove="images\sbor_back.png" />
+    <None Remove="images\shift.png" />
+    <None Remove="images\somknut.png" />
+    <None Remove="images\somknut_back.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="fonts\KREMLIN ALEXANDER.OTF" />
+    <Resource Include="fonts\Kremlin Alexander.ttf" />
+    <Resource Include="fonts\MUROMETZ.TTF" />
+    <Resource Include="images\ataka.png" />
+    <Resource Include="images\ataka_back.png" />
+    <Resource Include="images\Background_Choose.png" />
+    <Resource Include="images\Background_Email.png" />
+    <Resource Include="images\Background_End.png" />
+    <Resource Include="images\Background_Start.png" />
+    <Resource Include="images\backspace.png" />
+    <Resource Include="images\button.png" />
+    <Resource Include="images\Close_Button.png" />
+    <Resource Include="images\Mushket.png" />
+    <Resource Include="images\otstuplenie.png" />
+    <Resource Include="images\otstuplenie_back.png" />
+    <Resource Include="images\Pishal.png" />
+    <Resource Include="images\pohod.png" />
+    <Resource Include="images\pohod_back.png" />
+    <Resource Include="images\postroenie.png" />
+    <Resource Include="images\postroenie_back.png" />
+    <Resource Include="images\Samopal.png" />
+    <Resource Include="images\sbor.png" />
+    <Resource Include="images\sbor_back.png" />
+    <Resource Include="images\shift.png" />
+    <Resource Include="images\somknut.png" />
+    <Resource Include="images\somknut_back.png" />
+  </ItemGroup>
+
+</Project>

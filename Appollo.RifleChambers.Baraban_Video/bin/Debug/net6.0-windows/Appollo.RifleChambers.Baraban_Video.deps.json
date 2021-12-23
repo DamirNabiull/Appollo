@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Appollo.RifleChambers.Baraban_Video/1.0.0": {
+        "dependencies": {
+          "MJPEG-Decoder": "1.2.0"
+        },
+        "runtime": {
+          "Appollo.RifleChambers.Baraban_Video.dll": {}
+        }
+      },
+      "MJPEG-Decoder/1.2.0": {
+        "runtime": {
+          "lib/net35/MjpegProcessor.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Appollo.RifleChambers.Baraban_Video/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MJPEG-Decoder/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GjSVl+sxJE19gjYe53QfJZk0QUxwMHPgvL4Gmy+oRb1wEVSzi7x5WoBf+DQ201MHzy5OwQFMy+G4nkMkuJnhkg==",
+      "path": "mjpeg-decoder/1.2.0",
+      "hashPath": "mjpeg-decoder.1.2.0.nupkg.sha512"
+    }
+  }
+}

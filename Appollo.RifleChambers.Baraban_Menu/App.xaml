@@ -1,0 +1,36 @@
+﻿<Application x:Class="Appollo.RifleChambers.Baraban_Menu.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Appollo.RifleChambers.Baraban_Menu"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="imageTextColor" Color="#2D0F0F" />
+
+        <FontFamily x:Key="Murometz">pack://application:,,,/fonts/#MurometzTYGRA</FontFamily>
+        <FontFamily x:Key="Kremlin">pack://application:,,,/fonts/#Kremlin Alexander(RUS BY LYAJKA</FontFamily>
+
+        <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="KeyboardStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="#8E7561">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
