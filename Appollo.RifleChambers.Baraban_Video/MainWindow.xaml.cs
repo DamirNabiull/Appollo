@@ -32,7 +32,7 @@ namespace Appollo.RifleChambers.Baraban_Video
         private HttpListener _listener;
         private bool _server = true;
 
-        private double _time = 20;
+        private double _time = 15;
         private int photo_ind = 0;
         private bool make_photo = false;
 
@@ -79,7 +79,7 @@ namespace Appollo.RifleChambers.Baraban_Video
 
             strWorkPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-            video = System.IO.Path.Combine(strWorkPath, "Videos", "0.avi");
+            video = System.IO.Path.Combine(strWorkPath, "Videos", "0.mp4");
             player.Source = new Uri(video);
             player.Play();
 
@@ -156,6 +156,7 @@ namespace Appollo.RifleChambers.Baraban_Video
         private void SendMessage()
         {
             Trace.WriteLine(_email);
+            try
             {
                 SmtpClient client = new SmtpClient();
                 client.Host = "mail.nic.ru";
@@ -207,6 +208,10 @@ namespace Appollo.RifleChambers.Baraban_Video
                 mail.Subject = "Фото";
 
                 client.Send(mail);
+            } 
+            catch (Exception e)
+            {
+
             }
         }
 
@@ -265,7 +270,7 @@ namespace Appollo.RifleChambers.Baraban_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "1.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "1.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -277,7 +282,7 @@ namespace Appollo.RifleChambers.Baraban_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "2.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "2.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -289,7 +294,7 @@ namespace Appollo.RifleChambers.Baraban_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "3.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "3.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -301,7 +306,7 @@ namespace Appollo.RifleChambers.Baraban_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "4.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "4.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -313,7 +318,7 @@ namespace Appollo.RifleChambers.Baraban_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "5.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "5.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -325,14 +330,14 @@ namespace Appollo.RifleChambers.Baraban_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "6.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "6.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
                 else if (_state == "123")
                 {
                     player.Stop();
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "vybor.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "vybor.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -340,7 +345,7 @@ namespace Appollo.RifleChambers.Baraban_Video
                 {
                     player.Stop();
                     cam.Visibility = Visibility.Hidden;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "0.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "0.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -368,7 +373,7 @@ namespace Appollo.RifleChambers.Baraban_Video
             _state = "0";
             cam.Visibility = Visibility.Hidden;
             player.Stop();
-            video = System.IO.Path.Combine(strWorkPath, "Videos", "0.avi");
+            video = System.IO.Path.Combine(strWorkPath, "Videos", "0.mp4");
             player.Source = new Uri(video);
             player.Play();
         }

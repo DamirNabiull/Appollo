@@ -70,6 +70,7 @@ namespace Appollo.RifleChambers.Guns_Menu
         private void SendMessage(object sender, RoutedEventArgs e)
         {
             _client.GetAsync($"{host}/play/?state=777&email={_email}");
+            _email = "";
             Email.Visibility = Visibility.Hidden;
             End.Visibility = Visibility.Visible;
         }
@@ -77,6 +78,7 @@ namespace Appollo.RifleChambers.Guns_Menu
         private void Exit_Button(object sender, RoutedEventArgs e)
         {
             _client.GetAsync($"http://localhost:3001/play/?state=0&email=123");
+            _email = "";
             Window_1.Visibility = Visibility.Hidden;
             Window_2.Visibility = Visibility.Hidden;
             Window_3.Visibility = Visibility.Hidden;
@@ -90,6 +92,7 @@ namespace Appollo.RifleChambers.Guns_Menu
         {
             Email.Visibility = Visibility.Hidden;
             End.Visibility = Visibility.Hidden;
+            _email = "";
             Choose_Label.Visibility = Visibility.Hidden;
             Start_Label.Visibility = Visibility.Visible;
         }
@@ -135,6 +138,7 @@ namespace Appollo.RifleChambers.Guns_Menu
                     Window_1.Visibility = Visibility.Hidden;
                     Window_2.Visibility = Visibility.Hidden;
                     Window_3.Visibility = Visibility.Hidden;
+                    Email_Field.Text = _email;
                     Email.Visibility = Visibility.Visible;
                     _ended = "0";
                 }));

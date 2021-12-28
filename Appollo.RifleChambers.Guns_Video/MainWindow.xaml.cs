@@ -82,7 +82,7 @@ namespace Appollo.RifleChambers.Guns_Video
 
             strWorkPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-            video = System.IO.Path.Combine(strWorkPath, "Videos", "0.avi");
+            video = System.IO.Path.Combine(strWorkPath, "Videos", "0.mp4");
             player.Source = new Uri(video);
             player.Play();
 
@@ -159,6 +159,7 @@ namespace Appollo.RifleChambers.Guns_Video
         private void SendMessage()
         {
             Trace.WriteLine(_email);
+            try
             {
                 SmtpClient client = new SmtpClient();
                 client.Host = "mail.nic.ru";
@@ -210,6 +211,10 @@ namespace Appollo.RifleChambers.Guns_Video
                 mail.Subject = "Фото";
 
                 client.Send(mail);
+            }
+            catch (Exception e)
+            {
+
             }
         }
 
@@ -268,7 +273,7 @@ namespace Appollo.RifleChambers.Guns_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "1.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "1.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -280,7 +285,7 @@ namespace Appollo.RifleChambers.Guns_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "2.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "2.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -292,14 +297,14 @@ namespace Appollo.RifleChambers.Guns_Video
                     photo_timer.Start();
 
                     cam.Visibility = Visibility.Visible;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "3.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "3.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
                 else if (_state == "123")
                 {
                     player.Stop();
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "vybor.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "vybor.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -307,7 +312,7 @@ namespace Appollo.RifleChambers.Guns_Video
                 {
                     player.Stop();
                     cam.Visibility = Visibility.Hidden;
-                    video = System.IO.Path.Combine(strWorkPath, "Videos", "0.avi");
+                    video = System.IO.Path.Combine(strWorkPath, "Videos", "0.mp4");
                     player.Source = new Uri(video);
                     player.Play();
                 }
@@ -335,7 +340,7 @@ namespace Appollo.RifleChambers.Guns_Video
             _state = "0";
             cam.Visibility = Visibility.Hidden;
             player.Stop();
-            video = System.IO.Path.Combine(strWorkPath, "Videos", "0.avi");
+            video = System.IO.Path.Combine(strWorkPath, "Videos", "0.mp4");
             player.Source = new Uri(video);
             player.Play();
         }

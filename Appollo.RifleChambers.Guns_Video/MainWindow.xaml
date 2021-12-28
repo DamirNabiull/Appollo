@@ -11,7 +11,7 @@
         WindowStyle="None"
         Title="MainWindow" Height="1920" Width="1080">
     <Grid>
-        <MediaElement x:Name="player" LoadedBehavior="Manual" Width="1080" Height="1920" MediaEnded="player_MediaEnded"/>
+        <MediaElement x:Name="player" LoadedBehavior="Manual" UnloadedBehavior="Manual" Width="1080" Height="1920" MediaEnded="player_MediaEnded"/>
         <Image x:Name="cam" Margin="0 480 0 0" Width="480" Height="270" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill">
             <Image.RenderTransform>
                 <RotateTransform Angle="270" />
