@@ -86,6 +86,9 @@ namespace Appollo.RifleChambers.Guns_Video
             player.Source = new Uri(video);
             player.Play();
 
+            Trace.WriteLine(Config<AppConfig>.Value.Mail);
+            Trace.WriteLine(Config<AppConfig>.Value.Password);
+
             new Thread(RunServer).Start();
         }
 
@@ -166,7 +169,7 @@ namespace Appollo.RifleChambers.Guns_Video
                 client.Port = 587; // Обратите внимание что порт 587
                 client.EnableSsl = true;
                 client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential("strelets@museum-vf.ru", "1928Gfkfns"); // Ваши логин и пароль
+                client.Credentials = new NetworkCredential(Config<AppConfig>.Value.Mail, Config<AppConfig>.Value.Password); // Ваши логин и пароль
 
                 LinkedResource img1 = new LinkedResource($"{strWorkPath}/0.png");
                 img1.ContentId = Guid.NewGuid().ToString();
@@ -206,7 +209,7 @@ namespace Appollo.RifleChambers.Guns_Video
                 MailMessage mail = new MailMessage();
                 mail.IsBodyHtml = true;
                 mail.AlternateViews.Add(alternateView);
-                mail.From = new MailAddress("strelets@museum-vf.ru");
+                mail.From = new MailAddress(Config<AppConfig>.Value.Mail);
                 mail.To.Add(_email);
                 mail.Subject = "Фото";
 
@@ -344,6 +347,12 @@ namespace Appollo.RifleChambers.Guns_Video
             player.Source = new Uri(video);
             player.Play();
         }
+    }
+
+    public class AppConfig
+    {
+        public string Mail { get; set; }
+        public string Password { get; set; }
     }
 
     public static class UriExtensions

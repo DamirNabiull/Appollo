@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj": {}
+    "F:\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj": {
+    "F:\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj",
+        "projectUniqueName": "F:\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj",
         "projectName": "Appollo.RifleChambers.Baraban_Video",
-        "projectPath": "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj",
+        "projectPath": "F:\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj",
         "packagesPath": "C:\\Users\\Dale\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.RifleChambers.Baraban_Video\\obj\\",
+        "outputPath": "F:\\Appolo\\Appollo.RifleChambers.Baraban_Video\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

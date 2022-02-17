@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zbBFnASCu2Ef2yzAy24xnXLpP+UG8yuTJpjAutC2rLhkEESg5xr+7CO9kQYZpimZjXST0H4tSZfNj5DG+ZrwdQ==",
+  "dgSpecHash": "tvYEQel8ATdPYa9+nHts3amp/v3I/WrYZpJT5FsqUL5YloAxhhE3yRaj1UuPTVPAxnVRcMVg1JQL6wbba1aBIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj",
+  "projectFilePath": "F:\\Appolo\\Appollo.RifleChambers.Baraban_Video\\Appollo.RifleChambers.Baraban_Video.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dale\\.nuget\\packages\\mjpeg-decoder\\1.2.0\\mjpeg-decoder.1.2.0.nupkg.sha512"
   ],

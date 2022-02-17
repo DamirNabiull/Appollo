@@ -149,13 +149,13 @@ namespace Appolo.RifleChambers.Clerk
                 }
                 else
                 {
-                    Incorrect_Field.Text = "Некоректная почта";
+                    Incorrect_Field.Text = "Некорректная почта";
                 }
                 
             } 
             catch
             {
-                Incorrect_Field.Text = "Некоректная почта";
+                Incorrect_Field.Text = "Некорректная почта";
             }
         }
 

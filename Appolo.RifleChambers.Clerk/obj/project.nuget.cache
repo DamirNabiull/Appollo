@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f5eVeENBkwIuC9FFKCx0DrBMwf4/oW0F/wMoD/YqHo+wkamqj+cHMqL3SK0ir3IJd1OKbAQxXwVUmrECN5nsKw==",
+  "dgSpecHash": "CxpRZxtcrwlv2QP0Rui13a/qGkDynFKBOIkCgH5yZD50bmhapOqt+dx8edzizQgL62Gfaa8HUDPozvKluEjrow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dale\\Documents\\Appolo\\Appolo.RifleChambers.Clerk\\Appolo.RifleChambers.Clerk.csproj",
+  "projectFilePath": "F:\\Appolo\\Appolo.RifleChambers.Clerk\\Appolo.RifleChambers.Clerk.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dale\\.nuget\\packages\\aspose.tasks\\21.10.0\\aspose.tasks.21.10.0.nupkg.sha512",
     "C:\\Users\\Dale\\.nuget\\packages\\groupdocs.conversion\\21.10.0\\groupdocs.conversion.21.10.0.nupkg.sha512",

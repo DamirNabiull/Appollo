@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6N5PNSgVp72+Grm9UI0MnCztRAvqXoStNuzRB+WtDvD/SPiHfk5ACDKk5u2ZtzkmaB1+/IrxGhtv2BqGi3E7Pw==",
+  "dgSpecHash": "HvRqAW6K30V3irInJY/HofXZ8h7ZcVR5rKRFgeCA/vZr42MZgC2W74Hq/WtXphBM/o75GBaOzhdWnT8hzXNuiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dale\\Documents\\Appolo\\Appollo.RifleChambers.Guns_Video\\Appollo.RifleChambers.Guns_Video.csproj",
+  "projectFilePath": "F:\\Appolo\\Appollo.RifleChambers.Guns_Video\\Appollo.RifleChambers.Guns_Video.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dale\\.nuget\\packages\\mjpeg-decoder\\1.2.0\\mjpeg-decoder.1.2.0.nupkg.sha512"
   ],
